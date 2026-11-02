@@ -8,3 +8,6 @@ scratchpad
 # Volcados del VB6 con cadenas de conexion (credenciales)
 docs/inventario/dumps/
 docs/inventario/raw/
+
+# Instrucciones locales de Claude Code
+CLAUDE.md
