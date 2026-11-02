@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+*.log
+scratchpad
+*.tsbuildinfo
+
+# Volcados del VB6 con cadenas de conexion (credenciales)
+docs/inventario/dumps/
+docs/inventario/raw/

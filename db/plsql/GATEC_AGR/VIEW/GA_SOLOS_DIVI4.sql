@@ -1,0 +1,8 @@
+CREATE OR REPLACE VIEW GATEC_AGR.GA_SOLOS_DIVI4 AS
+select 1 cod_solo_usina,
+  TRIM(ZAFRA) || TRIM(COD_PER_CAÑERO) || TRIM(NRO_FINCA) || TRIM(PARCELA) ID_DIVI4,
+  HECTAREAS SOL_AREA
+     from lc_censos_parcelas_det
+
+ 
+/

@@ -1,0 +1,93 @@
+{
+ "GA_TRA_MODULOS": {
+  "rows": 3826,
+  "analyzed": "2025-03-06T02:33:07.000Z",
+  "columns": [
+   [
+    "ID_MODULO",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ID_TEXTO",
+    "NUMBER(9)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GA_TRA_TEXTOS": {
+  "rows": 6057,
+  "analyzed": "2025-03-06T02:33:07.000Z",
+  "columns": [
+   [
+    "ID_TEXTO",
+    "NUMBER(9)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LINGUA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "DSC_TEXTO",
+    "VARCHAR2(1000)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "INT_PORT_LABOR": {
+  "rows": 914783,
+  "analyzed": "2026-05-29T01:00:42.000Z",
+  "columns": [
+   [
+    "COD_EMPRESA",
+    "VARCHAR2(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_SUCURSAL",
+    "VARCHAR2(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_PORTERIA",
+    "VARCHAR2(5)",
+    "NOT NULL"
+   ],
+   [
+    "NRO_COMPROBANTE",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "PESO_ACOPLADO",
+    "NUMBER(8,2)"
+   ],
+   [
+    "NRO_ACOPLADO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "ZAFRA",
+    "VARCHAR2(5)",
+    "NOT NULL"
+   ],
+   [
+    "IND_SORTEO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPRESA,COD_SUCURSAL,COD_PORTERIA,NRO_COMPROBANTE,NRO_ACOPLADO",
+  "fks": [
+   "COD_EMPRESA,COD_SUCURSAL,COD_PORTERIA,NRO_COMPROBANTE,NRO_ACOPLADO -> PK_BA_ACOPLADO_SORTEO"
+  ],
+  "uks": []
+ }
+}

@@ -1,0 +1,98 @@
+@import "./tema.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Los campos y barras nativos del navegador siguen el tema elegido en la app (no el del sistema). */
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+@layer base {
+  body {
+    @apply bg-canvas text-sm text-ink antialiased;
+  }
+
+  /* Íconos de Lucide con un solo grosor en toda la app. */
+  svg.lucide {
+    stroke-width: 1.75;
+  }
+
+  /* Indicador de foco por teclado para todo lo que no define el suyo (enlaces, botones sueltos). */
+  :where(a, button, summary, [tabindex]):focus-visible {
+    @apply outline-none ring-2 ring-brand-600 ring-offset-1;
+  }
+}
+
+/* Escala tipográfica: título de página 18/600, título de panel 13/600, rótulo de sección 12/600 en
+   mayúsculas, datos y navegación 13, formularios y controles 14, texto secundario 12 en `muted`. */
+@layer components {
+  .page-title {
+    @apply font-display text-lg font-semibold tracking-tight text-ink;
+  }
+
+  .panel-title {
+    @apply text-[13px] font-semibold text-ink;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-wider text-muted;
+  }
+
+  .panel {
+    @apply rounded-lg border border-line bg-surface;
+  }
+
+  /* Fondo del Inicio (como el de la app móvil): resplandor azul arriba que se funde con el fondo general. */
+  .fondo-inicio {
+    background-image: radial-gradient(ellipse 80% 420px at 50% 0, rgb(var(--brand-100) / 0.9), transparent);
+  }
+
+  .dark .fondo-inicio {
+    background-image: radial-gradient(ellipse 80% 460px at 50% 0, rgb(var(--brand-100) / 0.85), rgb(var(--canvas)) 85%);
+  }
+
+  /* Paneles del Inicio: translúcidos, para que se vea el degradado. */
+  .panel-vidrio {
+    @apply rounded-lg border border-line bg-surface/80 backdrop-blur-sm;
+  }
+
+  /* Tabla de datos: encabezado fijo, filas de 36 px, cantidades alineadas a la derecha. */
+  .data-table {
+    @apply w-full border-separate border-spacing-0 text-[13px];
+  }
+
+  /* :where() mantiene la especificidad baja: las utilidades de cada celda (text-right, py-1, w-24) ganan. */
+  .data-table :where(th) {
+    @apply sticky top-0 z-10 whitespace-nowrap border-b border-line bg-slate-100 px-3 py-2 text-left text-xs font-semibold text-slate-600;
+  }
+
+  .data-table :where(td) {
+    @apply border-b border-slate-100 px-3 py-2 text-ink;
+  }
+
+  .data-table tbody tr:last-child :where(td) {
+    @apply border-b-0;
+  }
+}
+
+/* Impresión (botón «Imprimir» de la Digitación diaria): solo la grilla, sin menús, árbol ni barras. */
+@media print {
+  header, aside, nav, .no-imprimir { display: none !important; }
+  html, body, #root, #root * { overflow: visible !important; height: auto !important; max-height: none !important; }
+  th, td { position: static !important; }
+  /* Sin esto el navegador quita los colores de fondo (amarillo de las calculadas, verde de los encabezados) al imprimir o guardar en PDF. */
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+@page { size: A4 landscape; margin: 10mm; }

@@ -1,0 +1,132 @@
+<title>Coincidencia de fórmulas GPI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Infografía: tres anillos (fórmulas, columnas, día), cómo se mide y comparación septiembre/octubre */
+:root{
+  --bg:#f4f6f8; --surface:#ffffff; --fg:#14222b; --muted:#5a6b76; --line:#d9e0e5;
+  --ok:#1f7a5a; --ok-bg:#e3f4ec; --ok-fg:#0f4a35; --track:#e4e9ed;
+  --warn:#9a6a00; --warn-bg:#fff6e0; --warn-line:#e2b659;
+  --font:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1a21; --surface:#17252e; --fg:#e6edf1; --muted:#93a4af; --line:#2a3b46;
+  --ok:#52c79c; --ok-bg:#16372d; --ok-fg:#bfe9d6; --track:#2a3b46;
+  --warn:#f1dba6; --warn-bg:#2e2610; --warn-line:#8a6a1c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1a21; --surface:#17252e; --fg:#e6edf1; --muted:#93a4af; --line:#2a3b46;
+  --ok:#52c79c; --ok-bg:#16372d; --ok-fg:#bfe9d6; --track:#2a3b46;
+  --warn:#f1dba6; --warn-bg:#2e2610; --warn-line:#8a6a1c; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 var(--font);
+  padding-block:32px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:32px}
+h1{font-size:clamp(26px,4vw,38px);line-height:1.1;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-weight:600}
+.sub{color:var(--muted);margin:8px 0 0;max-width:68ch}
+.tag{display:inline-block;font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:99px;border:1px solid var(--line);color:var(--muted);margin-bottom:12px}
+
+.rings{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.ring{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ring svg{width:170px;height:170px}
+.ring .trk{fill:none;stroke:var(--track);stroke-width:14}
+.ring .val{fill:none;stroke:var(--ok);stroke-width:14;stroke-linecap:round;transform:rotate(-90deg);transform-origin:50% 50%}
+.ring text{fill:var(--fg);font:700 30px var(--font);text-anchor:middle}
+.ring h3{margin:0;font-size:17px}
+.ring .cnt{font:600 13px var(--mono);color:var(--ok)}
+.ring p{margin:0;font-size:13.5px;color:var(--muted)}
+
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;font-size:13.5px;position:relative}
+.step b{display:block;font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ok);margin-bottom:4px}
+
+.cmp{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:14px}
+.row{display:grid;grid-template-columns:110px 1fr 70px;gap:10px;align-items:center;font-size:13.5px}
+.row .t{font:600 12px var(--mono);color:var(--muted)}
+.row .b{height:14px;background:var(--track);border-radius:7px;overflow:hidden}
+.row .b i{display:block;height:100%;background:var(--ok)}
+.row .n{font:600 13px var(--mono);text-align:right}
+.grp{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--fg);margin-top:4px}
+
+.pend{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn);border-radius:8px;padding:14px 16px;font-size:13.5px}
+.pend b{display:block;font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.pend ul{margin:6px 0 0;padding-left:18px}
+.foot{font:12px var(--mono);color:var(--muted)}
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="tag">Motor de fórmulas GPI · octubre 2026</span>
+    <h1>Qué tanto coincide la app con el GATEC viejo</h1>
+    <p class="sub">Se recalcula cada fórmula con el motor nuevo y se compara, texto por texto, con lo que el VB6 dejó guardado en la base (DESA).</p>
+  </header>
+
+  <section>
+    <h2>Resultado</h2>
+    <div class="rings">
+      <div class="ring">
+        <svg viewBox="0 0 120 120" role="img" aria-label="98,14 % de fórmulas correctas">
+          <circle class="trk" cx="60" cy="60" r="50"/>
+          <circle class="val" cx="60" cy="60" r="50" pathLength="100" stroke-dasharray="98.14 100"/>
+          <text x="60" y="70">98,14 %</text>
+        </svg>
+        <h3>Fórmulas</h3>
+        <div class="cnt">1.107 de 1.128</div>
+        <p>Variables que dan igual que el VB6 en todos sus días (1–20/oct).</p>
+      </div>
+      <div class="ring">
+        <svg viewBox="0 0 120 120" role="img" aria-label="99,63 % de columnas">
+          <circle class="trk" cx="60" cy="60" r="50"/>
+          <circle class="val" cx="60" cy="60" r="50" pathLength="100" stroke-dasharray="99.63 100"/>
+          <text x="60" y="70">99,63 %</text>
+        </svg>
+        <h3>Columnas</h3>
+        <div class="cnt">23.495 de 23.582</div>
+        <p>Celdas de las planillas con el mismo valor guardado (1–21/oct).</p>
+      </div>
+      <div class="ring">
+        <svg viewBox="0 0 120 120" role="img" aria-label="99,32 % del día">
+          <circle class="trk" cx="60" cy="60" r="50"/>
+          <circle class="val" cx="60" cy="60" r="50" pathLength="100" stroke-dasharray="99.32 100"/>
+          <text x="60" y="70">99,32 %</text>
+        </svg>
+        <h3>Valor del día</h3>
+        <div class="cnt">13.609 de 13.702</div>
+        <p>Totales diarios (columna 99) con el mismo valor.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cómo se mide</h2>
+    <div class="flow">
+      <div class="step"><b>1 · Entradas</b>Se toman los valores guardados por el VB6 de las variables de las que depende cada fórmula.</div>
+      <div class="step"><b>2 · Cálculo</b>El motor de la app evalúa la fórmula aislada con esas entradas.</div>
+      <div class="step"><b>3 · Redondeo</b>Se arma el texto exacto que se guardaría (<code>Format()</code> de VB6).</div>
+      <div class="step"><b>4 · Comparación</b>Se compara con lo que el VB6 guardó. Solo cuenta si es idéntico.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Septiembre vs. octubre</h2>
+    <div class="cmp">
+      <div class="grp">Columnas</div>
+      <div class="row"><span class="t">Septiembre</span><span class="b"><i style="width:99.54%"></i></span><span class="n">99,54 %</span></div>
+      <div class="row"><span class="t">Octubre</span><span class="b"><i style="width:99.63%"></i></span><span class="n">99,63 %</span></div>
+      <div class="grp">Valor del día</div>
+      <div class="row"><span class="t">Septiembre</span><span class="b"><i style="width:99.09%"></i></span><span class="n">99,09 %</span></div>
+      <div class="row"><span class="t">Octubre</span><span class="b"><i style="width:99.32%"></i></span><span class="n">99,32 %</span></div>
+    </div>
+  </section>
+
+  <section class="pend">
+    <b>Lo que falta para llegar al 100 %</b>
+    <ul>
+      <li>Variable 5533 y tanques de jugo (aceptado provisoriamente).</li>
+      <li>Redondeo <code>Round()</code> de VB6 (pendiente M7).</li>
+      <li>Confirmar supuestos del motor con un usuario del GATEC.</li>
+    </ul>
+  </section>
+
+  <p class="foot">Fuente: docs/analisis/gpi-motor-formulas.md · validado con tools/gpi-validar-formulas.js · el 98,14 % es 1.107 ÷ 1.128.</p>
+</div>

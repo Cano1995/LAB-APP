@@ -1,0 +1,25 @@
+-- LAB_APP_AUDIT: registro de TODA escritura de la app (quién, qué, valor anterior y nuevo). Idempotente.
+DECLARE
+  n NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO n FROM user_tables WHERE table_name = 'LAB_APP_AUDIT';
+  IF n = 0 THEN
+    EXECUTE IMMEDIATE q'[
+      CREATE TABLE LAB_APP_AUDIT (
+        ID          NUMBER GENERATED ALWAYS AS IDENTITY,
+        FECHA       TIMESTAMP     DEFAULT SYSTIMESTAMP NOT NULL,
+        ID_USUARIO  NUMBER(5)     NOT NULL,
+        USUARIO     VARCHAR2(40)  NOT NULL,
+        ACCION      VARCHAR2(30)  NOT NULL,
+        TABLA       VARCHAR2(60)  NOT NULL,
+        CLAVE       VARCHAR2(200) NOT NULL,
+        ANTES       VARCHAR2(200),
+        DESPUES     VARCHAR2(200),
+        CONTEXTO    VARCHAR2(200),
+        CONSTRAINT PK_LAB_APP_AUDIT PRIMARY KEY (ID)
+      )
+    ]';
+    EXECUTE IMMEDIATE 'CREATE INDEX IX_LAB_APP_AUDIT_FECHA ON LAB_APP_AUDIT (FECHA)';
+  END IF;
+END;
+/

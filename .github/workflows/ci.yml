@@ -1,0 +1,28 @@
+# Integración continua: compila, revisa y prueba en cada push y pedido de cambios. No necesita la base de datos (las pruebas la simulan).
+# Los guiones de navegador (tools/e2e) y las herramientas de validación del motor sí usan DESA y se corren a mano.
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            api/package-lock.json
+            web/package-lock.json
+      - run: npm ci
+      - run: npm ci --prefix api
+      - run: npm ci --prefix web
+      - name: Lint, idioma, pruebas y compilación
+        run: npm run ci
+      - name: Dependencias de producción sin vulnerabilidades altas
+        run: npm run audit

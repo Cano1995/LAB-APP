@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" role="img" aria-label="Lab App">
+  <g transform="translate(8 8) scale(1)">
+    <path d="M25 11h14v4h-3v10l12 22c1.6 3-.5 6.5-4 6.5H20c-3.5 0-5.6-3.5-4-6.5l12-22V15h-3z" fill="#1f4e8c"/>
+  </g>
+  <text x="84" y="50" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" fill="#1f2937">Lab App</text>
+</svg>

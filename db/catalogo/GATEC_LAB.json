@@ -1,0 +1,10603 @@
+{
+ "GA_CUBO_ATU": {
+  "rows": 1,
+  "analyzed": "2025-03-06T02:32:59.000Z",
+  "columns": [
+   [
+    "ATU_MODULO",
+    "VARCHAR2(9)",
+    "NOT NULL"
+   ],
+   [
+    "ATU_VERSAO",
+    "VARCHAR2(8)",
+    "NOT NULL"
+   ],
+   [
+    "ATU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ATU_NUMERO",
+    "NUMBER(6)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GA_PRE_ANALI_CADASTRO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:33:04.000Z",
+  "columns": [
+   [
+    "COD_FAZENDA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "DSC_FAZENDA",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "COD_SETOR",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "DSC_SETOR",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "COD_PROP",
+    "NUMBER(4)"
+   ],
+   [
+    "DSC_PROP",
+    "VARCHAR2(40)"
+   ]
+  ],
+  "pk": "COD_SETOR,COD_FAZENDA",
+  "fks": [],
+  "uks": []
+ },
+ "GA_PRE_ANALI_OUTRAS_AREAS": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:33:05.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "PRE_CODIGO",
+    "NUMBER(12)",
+    "NOT NULL"
+   ],
+   [
+    "PRE_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "COD_TIPO_PRE",
+    "NUMBER(3)"
+   ],
+   [
+    "PRE_NRO_CORTE",
+    "NUMBER(2)"
+   ],
+   [
+    "PRE_IDADE",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PRE_BRIX",
+    "NUMBER(5,2)"
+   ],
+   [
+    "PRE_LS",
+    "NUMBER(6,2)"
+   ],
+   [
+    "PRE_PBU",
+    "NUMBER(6,2)"
+   ],
+   [
+    "COD_VARIE_USINA",
+    "NUMBER(4)"
+   ],
+   [
+    "PRE_UMIDADE",
+    "NUMBER(5,2)"
+   ],
+   [
+    "PRE_PH",
+    "NUMBER(3,1)"
+   ],
+   [
+    "PRE_OBS",
+    "VARCHAR2(50)"
+   ],
+   [
+    "PRE_BRIX_PE",
+    "NUMBER(5,2)"
+   ],
+   [
+    "PRE_BRIX_PONTA",
+    "NUMBER(5,2)"
+   ],
+   [
+    "PRE_NRO_COLMOS",
+    "NUMBER(3)"
+   ],
+   [
+    "PRE_PC",
+    "NUMBER(9,6)"
+   ],
+   [
+    "PRE_PUREZA",
+    "NUMBER(9,6)"
+   ],
+   [
+    "PRE_FIBRA",
+    "NUMBER(9,2)"
+   ],
+   [
+    "PRE_ATR",
+    "NUMBER(9,6)"
+   ],
+   [
+    "PRE_AR",
+    "NUMBER(4,2)"
+   ],
+   [
+    "PRE_ART",
+    "NUMBER(9,6)"
+   ],
+   [
+    "PRE_AR_CALDO",
+    "NUMBER(4,2)"
+   ],
+   [
+    "PRE_POL_CALDO",
+    "NUMBER(4,2)"
+   ],
+   [
+    "PRE_AGIO",
+    "NUMBER(9,6)"
+   ]
+  ],
+  "pk": "COD_EMPR,SAF_ANO_SAFRA,PRE_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GA_PRE_ANALI_OUTRAS_AREAS_D4": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:33:05.000Z",
+  "columns": [
+   [
+    "PRE_CODIGO",
+    "NUMBER(10)"
+   ],
+   [
+    "COD_SETOR",
+    "NUMBER(4)"
+   ],
+   [
+    "COD_FAZENDA",
+    "NUMBER(4)"
+   ],
+   [
+    "COD_TALHAO",
+    "NUMBER(6)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GA_TEMP_MEDIA_PRA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:33:07.000Z",
+  "columns": [
+   [
+    "TMP_BRIX",
+    "NUMBER(5,2)"
+   ],
+   [
+    "TMP_LS",
+    "NUMBER(6,2)"
+   ],
+   [
+    "TMP_POLCALDO",
+    "NUMBER(4,2)"
+   ],
+   [
+    "TMP_PBU",
+    "NUMBER(6,2)"
+   ],
+   [
+    "TMP_AR",
+    "NUMBER(4,2)"
+   ],
+   [
+    "ID_PRE_ANALI",
+    "NUMBER(7)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GA_TRA_LINGUAS": {
+  "rows": 2,
+  "analyzed": "2025-04-26T01:09:50.000Z",
+  "columns": [
+   [
+    "ID_LINGUA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "DSC_LINGUA",
+    "VARCHAR2(50)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_LINGUA",
+  "fks": [],
+  "uks": []
+ },
+ "GA_TRA_MODULOS": {
+  "rows": 2682,
+  "analyzed": "2025-03-06T02:33:07.000Z",
+  "columns": [
+   [
+    "ID_MODULO",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ID_TEXTO",
+    "NUMBER(9)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_MODULO,ID_TEXTO",
+  "fks": [],
+  "uks": []
+ },
+ "GA_TRA_TEXTOS": {
+  "rows": 4963,
+  "analyzed": "2025-04-26T01:09:51.000Z",
+  "columns": [
+   [
+    "ID_TEXTO",
+    "NUMBER(9)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LINGUA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "DSC_TEXTO",
+    "VARCHAR2(1000)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_TEXTO,ID_LINGUA",
+  "fks": [
+   "ID_LINGUA -> GA_TRA_LINGUAS"
+  ],
+  "uks": []
+ },
+ "GA_TRA_USUARIOS": {
+  "rows": 108,
+  "analyzed": "2025-04-26T01:09:50.000Z",
+  "columns": [
+   [
+    "ID_USUARIO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LINGUA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_USUARIO",
+  "fks": [
+   "ID_LINGUA -> GA_TRA_LINGUAS"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACESSO_CONS": {
+  "rows": 15204,
+  "analyzed": "2026-04-25T13:00:49.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_USUARIO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "ID_RELAT",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "ACC_FLAG",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ],
+   [
+    "ACC_LEITURA",
+    "NUMBER(1)"
+   ],
+   [
+    "ACC_ALTERACAO",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_USUARIO,ID_RELAT,ACC_FLAG",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_ACESSOS_PARADA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:33:30.000Z",
+  "columns": [
+   [
+    "ID_USUARIO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_SETOR_PARADA",
+    "NUMBER(10)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_USUARIO,COD_EMPR,ID_SETOR_PARADA",
+  "fks": [
+   "ID_SETOR_PARADA -> GI_LAB_SETOR_PARADA",
+   "ID_USUARIO -> PK_GAM_USUARIOS"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACESSOS_1": {
+  "rows": 28649,
+  "analyzed": "2025-04-26T01:09:51.000Z",
+  "columns": [
+   [
+    "ID_USUARIO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "USU_HABILITADO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_PLAN,ID_USUARIO",
+  "fks": [
+   "ID_PLAN -> GI_LAB_NO_PLAN_1"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2006": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:33:30.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2007": {
+  "rows": 447022,
+  "analyzed": "2025-03-06T02:33:30.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2008": {
+  "rows": 704634,
+  "analyzed": "2025-03-06T02:33:31.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2009": {
+  "rows": 631870,
+  "analyzed": "2025-03-06T02:33:33.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2010": {
+  "rows": 467899,
+  "analyzed": "2025-03-06T02:33:36.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2011": {
+  "rows": 641219,
+  "analyzed": "2025-03-06T02:33:37.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2012": {
+  "rows": 780052,
+  "analyzed": "2025-03-06T02:33:39.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2013": {
+  "rows": 918375,
+  "analyzed": "2025-03-06T02:33:42.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2014": {
+  "rows": 550949,
+  "analyzed": "2025-03-06T02:33:45.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2015": {
+  "rows": 618404,
+  "analyzed": "2025-03-06T02:33:48.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2016": {
+  "rows": 943132,
+  "analyzed": "2025-03-06T02:33:52.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2017": {
+  "rows": 895698,
+  "analyzed": "2025-03-06T02:33:57.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2018": {
+  "rows": 999200,
+  "analyzed": "2025-03-06T02:34:02.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2019": {
+  "rows": 1006887,
+  "analyzed": "2025-03-06T02:34:07.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2020": {
+  "rows": 994387,
+  "analyzed": "2025-03-06T02:34:13.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2021": {
+  "rows": 1021201,
+  "analyzed": "2025-03-06T02:34:19.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ACUM_1_2022": {
+  "rows": 951196,
+  "analyzed": "2025-03-06T02:34:22.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ACU_DIVISOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_MEDIA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ACU_VALOR_ACUM",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ACU_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ANOTACOES": {
+  "rows": 3122,
+  "analyzed": "2025-04-26T01:09:51.000Z",
+  "columns": [
+   [
+    "ID_PLAN",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "ANO_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ANO_TEXTO",
+    "VARCHAR2(4000)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_PLAN,ANO_DATA,COD_EMPR,SAF_ANO_SAFRA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_ANP_REL": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ARL_COD",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "ARL_DESC",
+    "VARCHAR2(40)"
+   ],
+   [
+    "ARL_CABECALHO",
+    "VARCHAR2(300)"
+   ],
+   [
+    "ARL_VOL_ANID",
+    "NUMBER(10)"
+   ],
+   [
+    "ARL_VOL_HIDR",
+    "NUMBER(10)"
+   ],
+   [
+    "ARL_ENCARREG1",
+    "VARCHAR2(40)"
+   ],
+   [
+    "ARL_ENCARREG2",
+    "VARCHAR2(40)"
+   ],
+   [
+    "ARL_SUPERV1",
+    "VARCHAR2(40)"
+   ],
+   [
+    "ARL_SUPERV2",
+    "VARCHAR2(40)"
+   ]
+  ],
+  "pk": "COD_EMPR,ARL_COD",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_ANP_REL_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ARL_COD",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ARV_METODO",
+    "VARCHAR2(15)"
+   ],
+   [
+    "ARV_TIPO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ],
+   [
+    "ARV_ORDEM",
+    "NUMBER(6)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,ARL_COD,ID_VAR,ARV_TIPO,ARV_ORDEM",
+  "fks": [
+   "COD_EMPR,ARL_COD -> GI_LAB_ANP_REL",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_BLOQ_DIG_COMENTA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "DIG_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "DIG_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "DIG_ULT_BATELADA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "DIG_TOT_BAT_NULA",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "DIG_DATA_DIG",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "DIG_COMENTA",
+    "VARCHAR2(2000)",
+    "NOT NULL"
+   ],
+   [
+    "DIG_USUARIO",
+    "VARCHAR2(20)"
+   ],
+   [
+    "DIG_STATUS",
+    "VARCHAR2(1)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CAD_ACAO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "ID_ACAO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ACA_DESC",
+    "VARCHAR2(100)"
+   ],
+   [
+    "ACA_OBS",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "ACA_STATUS",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "ID_ACAO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CAD_ACUCAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COD_CATEG",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "CAC_CODIGO",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "CAC_DESCRICAO",
+    "VARCHAR2(20)"
+   ],
+   [
+    "CAC_ABREVIADO",
+    "VARCHAR2(10)"
+   ],
+   [
+    "CAC_ORDEM",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "COD_CATEG,CAC_CODIGO",
+  "fks": [
+   "COD_CATEG -> GI_LAB_PRODUTO_CATEG"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CAD_CAUSA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "ID_CAUSA",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "CSA_DESC",
+    "VARCHAR2(100)"
+   ],
+   [
+    "CSA_OBS",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "CSA_STATUS",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "ID_CAUSA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CAD_MATER_PROCESSO": {
+  "rows": 104,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "MPR_PRODUTO",
+    "VARCHAR2(3)",
+    "NOT NULL"
+   ],
+   [
+    "MPR_COD_EQP",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "MPR_ORDEM",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "MPR_DESC",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "MPR_DESC_MATERIAL",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "MPR_CAPACIDADE",
+    "NUMBER(7)",
+    "NOT NULL"
+   ],
+   [
+    "MPR_LT_CM",
+    "NUMBER(8,3)"
+   ],
+   [
+    "MPR_TIPO_DIG",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR_POL",
+    "NUMBER(10)"
+   ],
+   [
+    "ID_VAR_BRIX",
+    "NUMBER(10)"
+   ],
+   [
+    "ID_VAR_GL",
+    "NUMBER(10)"
+   ],
+   [
+    "MPR_FORMULA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "MPR_ORI_DADOS",
+    "NUMBER(2)"
+   ],
+   [
+    "MPR_GEN_BUSCA_PROX",
+    "NUMBER(1)"
+   ],
+   [
+    "MPR_GEN_CAMPO",
+    "NUMBER(1)"
+   ],
+   [
+    "MPR_GEN_CODIGO",
+    "NUMBER(4)"
+   ],
+   [
+    "MPR_TP_DADO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ],
+   [
+    "MPR_DATA",
+    "DATE",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,MPR_PRODUTO,MPR_COD_EQP,MPR_DATA",
+  "fks": [
+   "ID_VAR_BRIX -> GI_LAB_VAR",
+   "ID_VAR_POL -> GI_LAB_VAR",
+   "ID_VAR_GL -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CAD_MATER_PROCESSO_GEN": {
+  "rows": 2,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "MPG_CODIGO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "MPG_DESCRICAO",
+    "VARCHAR2(50)",
+    "NOT NULL"
+   ],
+   [
+    "MPG_TIPO",
+    "VARCHAR2(3)",
+    "NOT NULL"
+   ],
+   [
+    "MPG_UTILIZA_ENTRE_SAFRA",
+    "VARCHAR2(1)"
+   ]
+  ],
+  "pk": "MPG_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CAD_PERIODO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ID_PER",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "PER_DSC",
+    "VARCHAR2(200)",
+    "NOT NULL"
+   ],
+   [
+    "PER_DT_INI",
+    "DATE"
+   ],
+   [
+    "PER_DT_FIM",
+    "DATE"
+   ]
+  ],
+  "pk": "COD_EMPR,SAF_ANO_SAFRA,ID_PER",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CAD_TURNO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_TURNO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "TUR_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "TUR_DESC",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "TUR_HORA_INI",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "TUR_HORA_FIM",
+    "DATE",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_TURNO,TUR_DATA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CAUSA_PARADA": {
+  "rows": 1,
+  "analyzed": "2026-03-21T01:01:00.000Z",
+  "comment": "Cadastro das Causas de Paradas (Nível 4)",
+  "columns": [
+   [
+    "ID_CAUSA_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação da Causa de Parada (Nível 4)"
+   ],
+   [
+    "CAP_DESC",
+    "VARCHAR2(30)",
+    "NOT NULL",
+    "Descrição"
+   ],
+   [
+    "CAP_ABV",
+    "VARCHAR2(15)",
+    "NOT NULL",
+    "Abreviação"
+   ]
+  ],
+  "pk": "ID_CAUSA_PARADA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CEP": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "CEP_CODIGO",
+    "NUMBER(5)"
+   ],
+   [
+    "CEP_DESCRICAO",
+    "VARCHAR2(250)"
+   ],
+   [
+    "CEP_TEMPO",
+    "NUMBER(5)"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CEP_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "CEP_CODIGO",
+    "NUMBER(5)"
+   ],
+   [
+    "CEV_CODIGO",
+    "NUMBER(5)"
+   ],
+   [
+    "CEV_DESC",
+    "VARCHAR2(40)"
+   ],
+   [
+    "CEV_ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "CEV_VAR_DESC",
+    "VARCHAR2(40)"
+   ],
+   [
+    "CEV_LIE",
+    "NUMBER(15,6)"
+   ],
+   [
+    "CEV_LSE",
+    "NUMBER(15,6)"
+   ],
+   [
+    "CEV_TIPO",
+    "NUMBER(1)"
+   ],
+   [
+    "CEV_ORDEM",
+    "NUMBER(2)"
+   ],
+   [
+    "CEV_QUANTIDADE",
+    "NUMBER(5)"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CLASS_ACUCAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COD_CATEG",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "CAC_CODIGO",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "CLA_MIN_MAX",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "CLA_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "CLA_ORDEM",
+    "NUMBER(3)"
+   ],
+   [
+    "CLA_DATA",
+    "DATE",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_CATEG,CAC_CODIGO,ID_VAR,CLA_MIN_MAX,CLA_DATA",
+  "fks": [
+   "COD_CATEG,CAC_CODIGO -> GI_LAB_CAD_ACUCAR",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CLASSE_CAUSA_PARADA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "comment": "Cruzamento entre a Classe (Nível 2) e a Causa de Parada (Nível 4)",
+  "columns": [
+   [
+    "ID_CLASSE_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação da Classe (Nível 2)"
+   ],
+   [
+    "ID_SETOR_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação do Setor (Nível 1)"
+   ],
+   [
+    "ID_CAUSA_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação da Causa de Parada (Nível 4)"
+   ]
+  ],
+  "pk": "ID_CLASSE_PARADA,ID_SETOR_PARADA,ID_CAUSA_PARADA",
+  "fks": [
+   "ID_CAUSA_PARADA -> GI_LAB_CAUSA_PARADA",
+   "ID_CLASSE_PARADA,ID_SETOR_PARADA -> GI_LAB_CLASSE_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CLASSE_PARADA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "comment": "Cadastro de Classes (Nivel 2)",
+  "columns": [
+   [
+    "ID_SETOR_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação do Setor (Nível 1)"
+   ],
+   [
+    "ID_CLASSE_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação da Classe (Nível 2)"
+   ],
+   [
+    "CLP_DESC",
+    "VARCHAR2(30)",
+    "NOT NULL",
+    "Descrição"
+   ],
+   [
+    "CLP_ABV",
+    "VARCHAR2(15)",
+    "NOT NULL",
+    "Abreviação"
+   ]
+  ],
+  "pk": "ID_CLASSE_PARADA,ID_SETOR_PARADA",
+  "fks": [
+   "ID_SETOR_PARADA -> GI_LAB_SETOR_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CONF_APARELHO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "CAP_DESC",
+    "VARCHAR2(60)"
+   ],
+   [
+    "ID_CAP",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "CAP_ABV",
+    "VARCHAR2(20)"
+   ],
+   [
+    "CAP_TAXA_TRANS",
+    "NUMBER(6)"
+   ],
+   [
+    "CAP_PORTA_SERIAL",
+    "NUMBER(1)"
+   ],
+   [
+    "CAP_PARIDADE",
+    "NUMBER(1)"
+   ],
+   [
+    "CAP_BITS_DADOS",
+    "NUMBER(1)"
+   ],
+   [
+    "CAP_BITS_PARADA",
+    "NUMBER(1)"
+   ],
+   [
+    "CAP_CARAC_ESTAB",
+    "VARCHAR2(5)"
+   ],
+   [
+    "CAP_INICIO_DADO",
+    "NUMBER(1)"
+   ],
+   [
+    "CAP_QTDE_DADO",
+    "NUMBER(2)"
+   ],
+   [
+    "CAP_REPETICOES",
+    "NUMBER(1)"
+   ],
+   [
+    "CAP_QTDE_CAPTACAO",
+    "NUMBER(5)"
+   ],
+   [
+    "CAP_DESABILITADO",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "ID_CAP",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONF_FUNCOES": {
+  "rows": 37,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COF_DESC",
+    "VARCHAR2(40)"
+   ],
+   [
+    "COF_ABV",
+    "VARCHAR2(10)"
+   ],
+   [
+    "ID_FUNCAO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "COF_TIPO",
+    "NUMBER(1)"
+   ],
+   [
+    "COF_QTD_PAR",
+    "NUMBER(2)"
+   ],
+   [
+    "COF_MEN_ALERTA",
+    "VARCHAR2(60)"
+   ]
+  ],
+  "pk": "ID_FUNCAO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONFIG_COR": {
+  "rows": 1,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COR_ESP",
+    "VARCHAR2(10)"
+   ],
+   [
+    "COR_CON",
+    "VARCHAR2(10)"
+   ],
+   [
+    "COR_VAR_CALC",
+    "VARCHAR2(10)"
+   ],
+   [
+    "COR_VAR_PRIMARIA",
+    "VARCHAR2(10)"
+   ],
+   [
+    "COR_VAR_SUGESTAO",
+    "VARCHAR2(10)"
+   ],
+   [
+    "COR_VAR_AUT",
+    "VARCHAR2(10)"
+   ],
+   [
+    "COR_HEADER_GRID_SEM_FOCO",
+    "VARCHAR2(10)"
+   ],
+   [
+    "COR_HEADER_GRID_COM_FOCO",
+    "VARCHAR2(10)"
+   ],
+   [
+    "COR_HEADER_GRID_MEDIAS",
+    "VARCHAR2(10)"
+   ],
+   [
+    "COR_HEADER_GRID_ESPEC",
+    "VARCHAR2(10)"
+   ],
+   [
+    "COR_HEADER_GRID_CONSELHO",
+    "VARCHAR2(10)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONF_LAYOUT_LINHA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "ID_CONF_LAYOUT",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CLL_SEQ",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "VAR_NOM_ANALI",
+    "VARCHAR2(60)"
+   ],
+   [
+    "CLL_FATOR",
+    "NUMBER(2)"
+   ]
+  ],
+  "pk": "ID_CONF_LAYOUT,COD_EMPR,CLL_SEQ",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "ID_CONF_LAYOUT,COD_EMPR -> GI_LAB_CONF_LAYOUT_TIT"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CONF_LAYOUT_TIT": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "ID_CONF_LAYOUT",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CLT_TITULO",
+    "VARCHAR2(60)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_CONF_LAYOUT,COD_EMPR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONF_NIRS": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "NIR_DESC",
+    "VARCHAR2(60)"
+   ],
+   [
+    "ID_NIR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "NIR_PATH",
+    "VARCHAR2(80)"
+   ],
+   [
+    "NIR_DATA_POS_I",
+    "NUMBER(3)"
+   ],
+   [
+    "NIR_DATA_POS_F",
+    "NUMBER(3)"
+   ],
+   [
+    "NIR_HORA_POS_I",
+    "NUMBER(3)"
+   ],
+   [
+    "NIR_HORA_POS_F",
+    "NUMBER(3)"
+   ],
+   [
+    "NIR_VALOR_POS_I",
+    "NUMBER(3)"
+   ],
+   [
+    "NIR_VALOR_POS_F",
+    "NUMBER(3)"
+   ],
+   [
+    "NIR_STATUS",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "ID_NIR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONF_REL_DIAG_LINHA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "ID_CONF_REL_DIAG",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CRL_SEQ",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "CRL_QUEBRA",
+    "NUMBER(1)"
+   ],
+   [
+    "CRL_STATUS",
+    "VARCHAR2(1)"
+   ],
+   [
+    "CRL_COR",
+    "VARCHAR2(15)"
+   ],
+   [
+    "CRL_COR_FONTE",
+    "VARCHAR2(15)"
+   ],
+   [
+    "VAR_NOM_ANALI",
+    "VARCHAR2(60)"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(10)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_CONF_REL_DIAG,CRL_SEQ",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONF_REL_DIAG_TIT": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "ID_CONF_REL_DIAG",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CRT_TITULO",
+    "VARCHAR2(60)",
+    "NOT NULL"
+   ],
+   [
+    "CRT_SUB_TITULO",
+    "VARCHAR2(60)"
+   ],
+   [
+    "CRT_PERIODI",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_STATUS",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_MED_DIA_SAF",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_MED_DIA_SAF_ANT",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_ACUM_SAF",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_ACUM_SAF_ANT",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_7_DIAS",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_30_DIAS",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_DESV_PADRAO",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_15_DIAS",
+    "NUMBER(15)"
+   ],
+   [
+    "CRT_SENHA_LEIT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "CRT_SENHA_ALT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "CRT_TIPO_REL",
+    "VARCHAR2(1)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONF_REL_LINHA": {
+  "rows": 829,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "ID_CONF_REL",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CRL_SEQ",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "CRL_QUEBRA",
+    "NUMBER(1)"
+   ],
+   [
+    "CRL_STATUS",
+    "CHAR(1)"
+   ],
+   [
+    "CRL_COR",
+    "VARCHAR2(15)"
+   ],
+   [
+    "CRL_COR_FONTE",
+    "VARCHAR2(15)"
+   ],
+   [
+    "VAR_NOM_ANALI",
+    "VARCHAR2(60)"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(10)"
+   ],
+   [
+    "CRL_ESTILO_FONTE",
+    "VARCHAR2(3)"
+   ]
+  ],
+  "pk": "ID_CONF_REL,COD_EMPR,CRL_SEQ",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "ID_CONF_REL,COD_EMPR -> GI_LAB_CONF_REL_TIT"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CONF_REL_ORD": {
+  "rows": 1,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ORDEM_0",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ORDEM_1",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ORDEM_2",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ORDEM_3",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ORDEM_4",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ORDEM_5",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ORDEM_6",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ORDEM_7",
+    "NUMBER(2)"
+   ],
+   [
+    "ORDEM_8",
+    "NUMBER(2)"
+   ],
+   [
+    "ORDEM_9",
+    "NUMBER(2)"
+   ],
+   [
+    "ORDEM_10",
+    "NUMBER(2)"
+   ],
+   [
+    "ORDEM_11",
+    "NUMBER(2)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONF_REL_RECORDE_LINHA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "ID_CONF_REL_RECORDE",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CRL_SEQ",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "CRL_QUEBRA",
+    "NUMBER(1)"
+   ],
+   [
+    "CRL_STATUS",
+    "VARCHAR2(1)"
+   ],
+   [
+    "VAR_NOM_ANALI",
+    "VARCHAR2(60)"
+   ],
+   [
+    "VAR_RES",
+    "VARCHAR2(1)"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(10)"
+   ],
+   [
+    "CRL_COR",
+    "VARCHAR2(15)"
+   ],
+   [
+    "CRL_COR_FONTE",
+    "VARCHAR2(15)"
+   ],
+   [
+    "CRL_ESTILO_FONTE",
+    "VARCHAR2(3)"
+   ],
+   [
+    "VAR_ULTDIA",
+    "NUMBER(1)"
+   ],
+   [
+    "VAR_ZERO",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_CONF_REL_RECORDE,CRL_SEQ",
+  "fks": [
+   "COD_EMPR,ID_CONF_REL_RECORDE -> GI_LAB_CONF_REL_RECORDE_TIT",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CONF_REL_RECORDE_TIT": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "ID_CONF_REL_RECORDE",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CRT_TITULO",
+    "VARCHAR2(60)",
+    "NOT NULL"
+   ],
+   [
+    "CRT_SUB_TITULO",
+    "VARCHAR2(60)"
+   ],
+   [
+    "CRT_STATUS",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_TIPO_REL",
+    "VARCHAR2(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_CONF_REL_RECORDE",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONF_REL_TIT": {
+  "rows": 16,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "ID_CONF_REL",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CRT_TITULO",
+    "VARCHAR2(60)",
+    "NOT NULL"
+   ],
+   [
+    "CRT_SUB_TITULO",
+    "VARCHAR2(60)"
+   ],
+   [
+    "CRT_PERIODI",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_STATUS",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_MED_DIA_SAF",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_MED_DIA_SAF_ANT",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_ACUM_SAF",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_ACUM_SAF_ANT",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_7_DIAS",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_30_DIAS",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_DESV_PADRAO",
+    "NUMBER(1)"
+   ],
+   [
+    "CRT_15_DIAS",
+    "NUMBER(15)"
+   ]
+  ],
+  "pk": "ID_CONF_REL,COD_EMPR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONF_VAR_CHECKLIST": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_VAR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONF_VAR_FECHAMENTO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_VAR",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CONS_EXCEL": {
+  "rows": 10,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "EXC_COD",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "EXC_DSC",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "EXC_ABV",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "EXC_ARQ",
+    "VARCHAR2(500)",
+    "NOT NULL"
+   ],
+   [
+    "EXC_SENHA",
+    "VARCHAR2(30)"
+   ],
+   [
+    "EXC_SALVAR_PDF",
+    "NUMBER(1)"
+   ],
+   [
+    "EXC_SALVAR_CSV",
+    "NUMBER(1)"
+   ],
+   [
+    "EXC_SEPARADOR_DEC",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,EXC_COD",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONS_EXCEL_CELULAS": {
+  "rows": 185,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "EXC_COD",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "EXC_SEQ",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "EXC_CELULA",
+    "VARCHAR2(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "EXC_TP_DADO",
+    "VARCHAR2(3)",
+    "NOT NULL"
+   ],
+   [
+    "EXC_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "EXC_DIA",
+    "VARCHAR2(4)"
+   ],
+   [
+    "EXC_COMPARA",
+    "VARCHAR2(1)"
+   ],
+   [
+    "EXC_BATELADA",
+    "NUMBER(3)"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(10)"
+   ],
+   [
+    "EXC_GRUPO_EMPR",
+    "VARCHAR2(500)"
+   ],
+   [
+    "EXC_INDICE_PLAN",
+    "VARCHAR2(5)"
+   ]
+  ],
+  "pk": "COD_EMPR,EXC_COD,EXC_SEQ,EXC_CELULA",
+  "fks": [
+   "COD_EMPR,EXC_COD -> GI_LAB_CONS_EXCEL",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CONS_FERMENTEC": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "ID_CONF_LAYOUT",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "FER_SEMANA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "FER_ULTIMA",
+    "CHAR(1)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_CONF_LAYOUT,COD_EMPR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONST": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:29.000Z",
+  "columns": [
+   [
+    "CON_DESC",
+    "VARCHAR2(30)"
+   ],
+   [
+    "CON_ABV",
+    "VARCHAR2(10)"
+   ],
+   [
+    "CON_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "ID_CONST",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "CON_TP_VALOR",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_CONST",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONSULTA": {
+  "rows": 136,
+  "analyzed": "2026-04-25T13:00:49.000Z",
+  "columns": [
+   [
+    "CON_DESC",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "CON_VARIAVEL",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "CON_DT_INI",
+    "DATE"
+   ],
+   [
+    "CON_DT_FIM",
+    "DATE"
+   ],
+   [
+    "CON_MEDIA",
+    "VARCHAR2(1)"
+   ],
+   [
+    "CON_CODIGO",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,CON_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONSULTA_LANC": {
+  "rows": 8,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CLA_CODIGO",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "CLA_DESC",
+    "VARCHAR2(40)"
+   ],
+   [
+    "CLA_VARIAVEL",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "CLA_DT_INI",
+    "DATE"
+   ],
+   [
+    "CLA_DT_FIM",
+    "DATE"
+   ]
+  ],
+  "pk": "COD_EMPR,CLA_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONTROLA_FECHAMENTO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "CON_USUARIO",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "CON_MAQUINA",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "CON_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "CON_TIPO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ],
+   [
+    "CON_ID_FECHAMENTO",
+    "NUMBER(10)"
+   ]
+  ],
+  "pk": "COD_EMPR,SAF_ANO_SAFRA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONTROLA_LOGOFF": {
+  "rows": 0,
+  "analyzed": "2026-07-17T01:00:59.000Z",
+  "columns": [
+   [
+    "MAQUINA",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "LOGADO",
+    "DATE"
+   ]
+  ],
+  "pk": "MAQUINA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONTROLA_P1_P2": {
+  "rows": 1,
+  "analyzed": "2025-04-26T01:00:10.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "EXEC_PARTE_1",
+    "NUMBER(1)"
+   ],
+   [
+    "EXEC_PARTE_2",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "COD_EMPR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CONTROLE_VERSAO": {
+  "rows": 1,
+  "analyzed": "2025-04-26T01:00:10.000Z",
+  "columns": [
+   [
+    "VERSAO",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "CONTROLE",
+    "NUMBER(4)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CORRELACAO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "COR_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COR_DESC",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "COR_DT_INI",
+    "DATE"
+   ],
+   [
+    "COR_DT_FIM",
+    "DATE"
+   ],
+   [
+    "COR_MEDIA",
+    "VARCHAR2(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,COR_CODIGO",
+  "fks": [
+   "COD_EMPR -> PK_GA_EMPR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CORRELACAO_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "COR_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "COR_ORDEM",
+    "NUMBER(5)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,COR_CODIGO,ID_VAR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CURVA_BRIX_CONF": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBM_COD_MOENDA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBC_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "CBC_DESC",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,CBM_COD_MOENDA,CBC_CODIGO",
+  "fks": [
+   "COD_EMPR,CBM_COD_MOENDA -> GI_LAB_CURVA_BRIX_MOENDA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CURVA_BRIX_CONF_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBM_COD_MOENDA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBC_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "CBV_NUM_TERNO",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,CBM_COD_MOENDA,CBC_CODIGO,CBV_NUM_TERNO",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "COD_EMPR,CBM_COD_MOENDA,CBC_CODIGO -> GI_LAB_CURVA_BRIX_CONF"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CURVA_BRIX_DESC": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "CBM_COD_MOENDA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBD_NUM_TERNO",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBD_DESCRICAO",
+    "VARCHAR2(50)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CURVA_BRIX_MOENDA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBM_COD_MOENDA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBM_DESC",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "CBM_QTD_TERNO",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBM_TIPO",
+    "VARCHAR2(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,CBM_COD_MOENDA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_CURVA_BRIX_PADRAO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBM_COD_MOENDA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBP_DATA",
+    "DATE",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,CBM_COD_MOENDA,CBP_DATA",
+  "fks": [
+   "COD_EMPR,CBM_COD_MOENDA -> GI_LAB_CURVA_BRIX_MOENDA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_CURVA_BRIX_PADRAO_DIG": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBM_COD_MOENDA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBP_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "CBD_NUM_TERNO",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CBD_VALOR",
+    "NUMBER(8,4)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,CBM_COD_MOENDA,CBP_DATA,CBD_NUM_TERNO",
+  "fks": [
+   "COD_EMPR,CBM_COD_MOENDA,CBP_DATA -> GI_LAB_CURVA_BRIX_PADRAO"
+  ],
+  "uks": []
+ },
+ "GI_LAB_DEP_ORD": {
+  "rows": 3915,
+  "analyzed": "2025-04-26T01:09:51.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ORD_ORDEM",
+    "NUMBER(4)"
+   ]
+  ],
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_DEP_VAR": {
+  "rows": 5172,
+  "analyzed": "2025-03-06T02:34:30.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "ID_VAR_DEP",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "TIPO_DEP",
+    "NUMBER(1)"
+   ]
+  ],
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_DIG_MATER_PROCESSO": {
+  "rows": 293918,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "MPR_COD_EQP",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "MPR_PRODUTO",
+    "VARCHAR2(3)",
+    "NOT NULL"
+   ],
+   [
+    "MPR_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "MPR_VALOR",
+    "NUMBER(15,3)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "MPR_COD_EQP,MPR_PRODUTO,MPR_DATA,COD_EMPR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_DIG_RETROATIVA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "ID_USUARIO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "DIG_RET_NUM_DIAS",
+    "NUMBER(2)"
+   ]
+  ],
+  "pk": "ID_USUARIO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_DOC_PROCESSO": {
+  "rows": 12,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "ID_PLAN",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "DOC_METODO",
+    "VARCHAR2(2000)"
+   ]
+  ],
+  "pk": "ID_PLAN",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_EMAIL_CONF": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "EMA_POP",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "EMA_SMTP",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "EMA_NOME",
+    "VARCHAR2(100)"
+   ],
+   [
+    "EMA_SENHA",
+    "VARCHAR2(100)"
+   ],
+   [
+    "EMA_DE",
+    "VARCHAR2(100)"
+   ],
+   [
+    "EMA_ASSUNTO",
+    "VARCHAR2(100)"
+   ],
+   [
+    "EMA_PORT",
+    "VARCHAR2(4)"
+   ],
+   [
+    "EMA_TIMEOUT",
+    "NUMBER(3)"
+   ],
+   [
+    "EMA_TP_AUTENTICACAO",
+    "NUMBER(1)"
+   ],
+   [
+    "EMA_USA_SSL",
+    "NUMBER(1)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_EMAIL_DESTINATARIOS": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "EDE_CODIGO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "EDE_NOME",
+    "VARCHAR2(100)",
+    "NOT NULL"
+   ],
+   [
+    "EDE_EMAIL",
+    "VARCHAR2(100)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,EDE_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_EMAIL_GRUPO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "GRU_CODIGO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "GRU_DESC",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "GRU_ABV",
+    "VARCHAR2(15)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,GRU_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_EMAIL_GRUPO_DESTINO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "EDE_CODIGO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "GRU_CODIGO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "DES_NOME",
+    "VARCHAR2(100)",
+    "NOT NULL"
+   ],
+   [
+    "DES_EMAIL",
+    "VARCHAR2(100)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [
+   "COD_EMPR,GRU_CODIGO -> GI_LAB_EMAIL_GRUPO",
+   "COD_EMPR,EDE_CODIGO -> GI_LAB_EMAIL_DESTINATARIOS"
+  ],
+  "uks": []
+ },
+ "GI_LAB_EMPR": {
+  "rows": 1,
+  "analyzed": "2025-04-26T01:09:51.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "DSC_EMPR",
+    "VARCHAR2(40)"
+   ],
+   [
+    "ABV_EMPR",
+    "VARCHAR2(20)"
+   ]
+  ],
+  "pk": "COD_EMPR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_EQUIP_PARADA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "comment": "Cadastro de Equipamentos (Nível 3)",
+  "columns": [
+   [
+    "ID_SETOR_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação do Setor (Nível 1)"
+   ],
+   [
+    "ID_CLASSE_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação da Classe (Nível 2)"
+   ],
+   [
+    "ID_EQUIP_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código identificador do Equipamento (Nível 3)"
+   ],
+   [
+    "EQP_DESC",
+    "VARCHAR2(30)",
+    "NOT NULL",
+    "Descrição"
+   ],
+   [
+    "EQP_ABV",
+    "VARCHAR2(15)",
+    "NOT NULL",
+    "Abreviação"
+   ]
+  ],
+  "pk": "ID_SETOR_PARADA,ID_CLASSE_PARADA,ID_EQUIP_PARADA",
+  "fks": [
+   "ID_CLASSE_PARADA,ID_SETOR_PARADA -> GI_LAB_CLASSE_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_ESPEC_ALCOOL": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "DSC_ESPEC_ALCOOL",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LINHA",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "EAL_PH_INICI",
+    "NUMBER(5,2)",
+    "NOT NULL"
+   ],
+   [
+    "EAL_PH_FIM",
+    "NUMBER(5,2)",
+    "NOT NULL"
+   ],
+   [
+    "EAL_CONDU_INICI",
+    "NUMBER(7,2)",
+    "NOT NULL"
+   ],
+   [
+    "EAL_CONDU_FIM",
+    "NUMBER(7,2)",
+    "NOT NULL"
+   ],
+   [
+    "EAL_ACIDE_INICI",
+    "NUMBER(6,2)",
+    "NOT NULL"
+   ],
+   [
+    "EAL_ACIDE_FIM",
+    "NUMBER(6,2)",
+    "NOT NULL"
+   ],
+   [
+    "EAL_GRAU_INICI",
+    "NUMBER(5,2)",
+    "NOT NULL"
+   ],
+   [
+    "EAL_GRAU_FIM",
+    "NUMBER(5,2)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_LINHA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_EXP_GERAL": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)"
+   ],
+   [
+    "COD_REL",
+    "NUMBER(5)"
+   ],
+   [
+    "DATA",
+    "DATE"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "VAR_NOM_ANALI",
+    "VARCHAR2(30)"
+   ],
+   [
+    "UNIDADE",
+    "VARCHAR2(15)"
+   ],
+   [
+    "DIARIO",
+    "VARCHAR2(30)"
+   ],
+   [
+    "ACUMULADO",
+    "VARCHAR2(30)"
+   ],
+   [
+    "SEMANA",
+    "VARCHAR2(30)"
+   ],
+   [
+    "QUINZENA",
+    "VARCHAR2(30)"
+   ],
+   [
+    "MES",
+    "VARCHAR2(30)"
+   ],
+   [
+    "DIARIO_SAF_ANT",
+    "VARCHAR2(30)"
+   ],
+   [
+    "ACUMULADO_SAF_ANT",
+    "VARCHAR2(30)"
+   ],
+   [
+    "SAFRA",
+    "VARCHAR2(9)"
+   ],
+   [
+    "ORDEM",
+    "NUMBER(3)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_EXPORTA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_EXPORTA",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "EXP_DESC",
+    "VARCHAR2(60)",
+    "NOT NULL"
+   ],
+   [
+    "EXP_ATIVA",
+    "NUMBER(1)"
+   ],
+   [
+    "EXP_ARQ_GERAR",
+    "NUMBER(1)"
+   ],
+   [
+    "EXP_ARQ_CABECALHO",
+    "NUMBER(1)"
+   ],
+   [
+    "EXP_ARQ_TIPO",
+    "NUMBER(1)"
+   ],
+   [
+    "EXP_ARQ_LOCAL",
+    "VARCHAR2(1000)"
+   ],
+   [
+    "EXP_ARQ_NOME",
+    "VARCHAR2(1000)"
+   ],
+   [
+    "EXP_TEM_BATELADA",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_EXPORTA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_EXPORTA_ARQUIVO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_EXPORTA",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "EXA_ORDEM",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "EXA_NOME_COLUNA",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "EXA_CABECALHO",
+    "VARCHAR2(50)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_EXPORTA,EXA_ORDEM",
+  "fks": [
+   "COD_EMPR,ID_EXPORTA -> GI_LAB_EXPORTA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_EXPORTA_DADOS": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ID_EXPORTA",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "EXP_DESC",
+    "VARCHAR2(60)",
+    "NOT NULL"
+   ],
+   [
+    "EXD_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "VAR_NOM_ANALI",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "UNI_ABV",
+    "VARCHAR2(20)"
+   ],
+   [
+    "EXD_VAL_DIA",
+    "VARCHAR2(20)"
+   ],
+   [
+    "EXD_VAL_SEMANA",
+    "VARCHAR2(20)"
+   ],
+   [
+    "EXD_VAL_QUINZENA",
+    "VARCHAR2(20)"
+   ],
+   [
+    "EXD_VAL_MES",
+    "VARCHAR2(20)"
+   ],
+   [
+    "EXD_VAL_ACUM",
+    "VARCHAR2(20)"
+   ],
+   [
+    "EXD_ORDEM",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "EXD_DATA_EXPORTA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "EXD_VAL_SAFRA_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "EXD_VAL_DIA_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "EXD_VAL_ULT_DIAS",
+    "VARCHAR2(20)"
+   ]
+  ],
+  "pk": "COD_EMPR,SAF_ANO_SAFRA,ID_EXPORTA,EXD_DATA,ID_VAR",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_EXPORTA_DADOS_BAT": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ID_EXPORTA",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "EXP_DESC",
+    "VARCHAR2(60)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "VAR_NOM_ANALI",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "UNI_ABV",
+    "VARCHAR2(20)"
+   ],
+   [
+    "EXD_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "EXD_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "EXD_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "EXD_ORDEM",
+    "NUMBER(3)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,SAF_ANO_SAFRA,ID_EXPORTA,EXD_DATA,EXD_COLUNA,ID_VAR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_EXPORTA_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_EXPORTA",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "EXV_ORDEM",
+    "NUMBER(3)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_EXPORTA,ID_VAR",
+  "fks": [
+   "COD_EMPR,ID_EXPORTA -> GI_LAB_EXPORTA",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_FECHA_AUX": {
+  "rows": 455,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "ID_VAR_AUX",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_GRAF_SUPERV": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SUP_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "SUP_DESC",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "SUP_TEMPO",
+    "NUMBER(4)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,SUP_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_GRAF_SUPERV_CONF": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SUP_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "SCN_CODIGO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "SCN_ORDEM",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SCN_DESC",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "SCN_EIXO1_DESC",
+    "VARCHAR2(40)"
+   ],
+   [
+    "SCN_EIXO1_MIN",
+    "NUMBER(15,6)"
+   ],
+   [
+    "SCN_EIXO1_MAX",
+    "NUMBER(15,6)"
+   ],
+   [
+    "SCN_EIXO1_TIPO",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "SCN_EIXO2_DESC",
+    "VARCHAR2(40)"
+   ],
+   [
+    "SCN_EIXO2_MIN",
+    "NUMBER(15,6)"
+   ],
+   [
+    "SCN_EIXO2_MAX",
+    "NUMBER(15,6)"
+   ],
+   [
+    "SCN_EIXO2_TIPO",
+    "NUMBER(1)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,SUP_CODIGO,SCN_CODIGO",
+  "fks": [
+   "COD_EMPR,SUP_CODIGO -> GI_LAB_GRAF_SUPERV"
+  ],
+  "uks": []
+ },
+ "GI_LAB_GRAF_SUPERV_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SUP_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "SCN_CODIGO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "SUV_EIXO",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "SUV_ORDEM",
+    "NUMBER(2)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,SUP_CODIGO,SCN_CODIGO,SUV_EIXO,ID_VAR",
+  "fks": [
+   "COD_EMPR,SUP_CODIGO,SCN_CODIGO -> GI_LAB_GRAF_SUPERV_CONF"
+  ],
+  "uks": []
+ },
+ "GI_LAB_GRUPO_METODO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "GRM_DESC",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "ID_GRUPO_MET",
+    "NUMBER(3)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_GRUPO_MET",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_GRUPO_PARADA": {
+  "rows": 2,
+  "analyzed": "2025-03-06T02:34:31.000Z",
+  "columns": [
+   [
+    "GRP_DESC",
+    "VARCHAR2(30)"
+   ],
+   [
+    "ID_GRUPO_PARADA",
+    "NUMBER(3)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_GRUPO_PARADA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_GRUPO_PARADA_STATUS": {
+  "rows": 2,
+  "analyzed": "2025-03-06T02:34:32.000Z",
+  "columns": [
+   [
+    "ID_GRUPO_PARADA",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "PST_STATUS",
+    "NUMBER(1)"
+   ],
+   [
+    "PST_DATA_STATUS",
+    "DATE",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_GRUPO_PARADA,PST_DATA_STATUS",
+  "fks": [
+   "ID_GRUPO_PARADA -> GI_LAB_GRUPO_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_ACAO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:37.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(9)"
+   ],
+   [
+    "MOV_DATA",
+    "DATE"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "ESP_MIN_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "ESP_MAX_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PLA_CAUSA",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "PLA_ACAO",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "LOG_RESP_LANC",
+    "VARCHAR2(30)"
+   ],
+   [
+    "LOG_DT_ATU",
+    "DATE"
+   ],
+   [
+    "LOG_RESP_PLANO",
+    "VARCHAR2(50)"
+   ],
+   [
+    "LOG_STATUS",
+    "VARCHAR2(1)"
+   ],
+   [
+    "ID_CAUSA",
+    "NUMBER(10)"
+   ]
+  ],
+  "fks": [
+   "ID_CAUSA -> GI_LAB_CAD_CAUSA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_CONSELHO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:37.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "CON_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "CON_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CON_MIN_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "CON_MAX_VALOR",
+    "VARCHAR2(20)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_VAR,CON_DATA,CON_COLUNA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_ESPEC": {
+  "rows": 274,
+  "analyzed": "2025-04-26T01:09:50.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ESP_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ESP_MIN_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "ESP_MAX_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "ESP_MIN_INCLUSIVE",
+    "NUMBER(1)"
+   ],
+   [
+    "ESP_MAX_INCLUSIVE",
+    "NUMBER(1)"
+   ],
+   [
+    "ESP_MIN_VALOR_FORM",
+    "VARCHAR2(20)"
+   ],
+   [
+    "ESP_MAX_VALOR_FORM",
+    "VARCHAR2(20)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_VAR,ESP_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "COD_EMPR -> PK_GA_EMPR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_FORA_ESPEC": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:37.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(9)"
+   ],
+   [
+    "MOV_DATA",
+    "DATE"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "ESP_MIN_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "ESP_MAX_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "FES_JUSTIFICA",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "LOG_RESP_LANC",
+    "VARCHAR2(30)"
+   ],
+   [
+    "LOG_DT_ATU",
+    "DATE"
+   ],
+   [
+    "LOG_STATUS",
+    "VARCHAR2(1)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_METAS": {
+  "rows": 57,
+  "analyzed": "2025-03-06T02:34:37.000Z",
+  "columns": [
+   [
+    "ID_LANC_METAS",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MET_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "MET_DIARIO",
+    "VARCHAR2(20)"
+   ],
+   [
+    "MET_SEMANAL",
+    "VARCHAR2(20)"
+   ],
+   [
+    "MET_QUINZENAL",
+    "VARCHAR2(20)"
+   ],
+   [
+    "MET_MENSAL",
+    "VARCHAR2(20)"
+   ],
+   [
+    "MET_ACUMULADO",
+    "VARCHAR2(20)"
+   ],
+   [
+    "MET_TIPO_VALOR",
+    "NUMBER(1)"
+   ],
+   [
+    "MET_IDEAL",
+    "VARCHAR2(1)"
+   ],
+   [
+    "MET_OBS",
+    "VARCHAR2(500)"
+   ]
+  ],
+  "pk": "ID_LANC_METAS,MET_DATA",
+  "fks": [
+   "ID_LANC_METAS -> GI_LAB_LANC_METAS_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_METAS_VAR": {
+  "rows": 58,
+  "analyzed": "2025-03-06T02:34:37.000Z",
+  "columns": [
+   [
+    "ID_LANC_METAS",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_LANC_METAS",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_METAS_1_2008": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:34:37.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MET_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "MET_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MET_DATA,MET_VALOR",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2006": {
+  "rows": 571,
+  "analyzed": "2026-07-17T01:01:01.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "ID_LANC -> GI_LAB_LANC_1_2006"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2007": {
+  "rows": 1033729,
+  "analyzed": "2026-04-25T13:00:51.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "ID_LANC -> GI_LAB_LANC_1_2007"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2008": {
+  "rows": 1338388,
+  "analyzed": "2025-03-06T02:35:01.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_LANC -> GI_LAB_LANC_1_2008",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2009": {
+  "rows": 1392562,
+  "analyzed": "2025-03-06T02:35:06.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "ID_LANC -> GI_LAB_LANC_1_2009"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2010": {
+  "rows": 1270901,
+  "analyzed": "2025-03-06T02:35:12.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "ID_LANC -> GI_LAB_LANC_1_2010"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2011": {
+  "rows": 1429625,
+  "analyzed": "2025-03-06T02:35:18.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_LANC -> GI_LAB_LANC_1_2011",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2012": {
+  "rows": 1190347,
+  "analyzed": "2025-03-06T02:35:24.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_LANC -> GI_LAB_LANC_1_2012",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2013": {
+  "rows": 1807079,
+  "analyzed": "2025-03-06T02:35:28.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "ID_LANC -> GI_LAB_LANC_1_2013"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2014": {
+  "rows": 1733066,
+  "analyzed": "2025-03-06T02:35:36.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_LANC -> GI_LAB_LANC_1_2014",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2015": {
+  "rows": 1974417,
+  "analyzed": "2025-03-06T02:35:49.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "ID_LANC -> GI_LAB_LANC_1_2015"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2016": {
+  "rows": 2055487,
+  "analyzed": "2025-04-26T01:09:53.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "ID_LANC -> GI_LAB_LANC_1_2016"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2017": {
+  "rows": 1595896,
+  "analyzed": "2026-04-25T01:01:00.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2018": {
+  "rows": 1824596,
+  "analyzed": "2026-04-25T13:00:54.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_LANC -> GI_LAB_LANC_1_2018",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2019": {
+  "rows": 2064254,
+  "analyzed": "2026-04-25T13:00:57.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_LANC -> GI_LAB_LANC_1_2019",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2020": {
+  "rows": 2045288,
+  "analyzed": "2026-04-25T13:01:00.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_LANC -> GI_LAB_LANC_1_2020",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2021": {
+  "rows": 2088462,
+  "analyzed": "2026-04-25T13:01:03.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_LANC -> GI_LAB_LANC_1_2021",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_MOV_1_2022": {
+  "rows": 2137383,
+  "analyzed": "2026-07-17T01:01:01.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_VALOR",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,MOV_COLUNA,ID_LANC",
+  "fks": [
+   "ID_LANC -> GI_LAB_LANC_1_2022",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_PARADA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:43.000Z",
+  "comment": "Lançamento das paradas",
+  "columns": [
+   [
+    "ID_LANC_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Identificador do lançamento de parada"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL",
+    "Código da empresa"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL",
+    "Ano Safra"
+   ],
+   [
+    "ID_SETOR_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação do Setor (Nível 1)"
+   ],
+   [
+    "ID_CLASSE_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação da Classe (Nível 2)"
+   ],
+   [
+    "ID_EQUIP_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código identificador do Equipamento (Nível 3)"
+   ],
+   [
+    "ID_CAUSA_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação da Causa de Parada (Nível 4)"
+   ],
+   [
+    "LAN_DATA_HORA_INICIO",
+    "DATE",
+    "NOT NULL",
+    "Data / Hora do Início da parada"
+   ],
+   [
+    "LAN_DATA_HORA_FIM",
+    "DATE",
+    "NOT NULL",
+    "Data / Hora do final da parada"
+   ],
+   [
+    "LAN_HORAS_PARADAS_OLD",
+    "DATE",
+    "Total de horas paradas"
+   ],
+   [
+    "LAN_MOTIVO_OUTROS",
+    "VARCHAR2(30)",
+    "Descrição para quando o motivo selecionado for Outros"
+   ],
+   [
+    "LAN_OBSERVACOES",
+    "VARCHAR2(2000)",
+    "Observações"
+   ],
+   [
+    "LAN_HORAS_PARADAS",
+    "VARCHAR2(5)"
+   ]
+  ],
+  "pk": "ID_LANC_PARADA",
+  "fks": [
+   "ID_CLASSE_PARADA,ID_SETOR_PARADA,ID_CAUSA_PARADA -> GI_LAB_CLASSE_CAUSA_PARADA",
+   "ID_SETOR_PARADA,ID_CLASSE_PARADA,ID_EQUIP_PARADA -> GI_LAB_EQUIP_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2006": {
+  "rows": 9,
+  "analyzed": "2026-07-17T01:00:59.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2007": {
+  "rows": 43743,
+  "analyzed": "2026-04-25T13:00:49.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2008": {
+  "rows": 60161,
+  "analyzed": "2025-03-06T02:34:32.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2009": {
+  "rows": 52751,
+  "analyzed": "2025-03-06T02:34:32.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2010": {
+  "rows": 44145,
+  "analyzed": "2025-03-06T02:34:32.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2011": {
+  "rows": 54683,
+  "analyzed": "2025-03-06T02:34:32.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2012": {
+  "rows": 42684,
+  "analyzed": "2025-03-06T02:34:32.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2013": {
+  "rows": 67083,
+  "analyzed": "2025-03-06T02:34:32.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2014": {
+  "rows": 49841,
+  "analyzed": "2025-03-06T02:34:33.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2015": {
+  "rows": 54289,
+  "analyzed": "2025-03-06T02:34:33.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2016": {
+  "rows": 66236,
+  "analyzed": "2025-03-06T02:34:34.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2017": {
+  "rows": 58993,
+  "analyzed": "2026-04-25T01:00:58.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2018": {
+  "rows": 64822,
+  "analyzed": "2026-04-25T13:00:50.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2019": {
+  "rows": 67686,
+  "analyzed": "2026-04-25T13:00:50.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2020": {
+  "rows": 64955,
+  "analyzed": "2026-04-25T13:00:50.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2021": {
+  "rows": 64120,
+  "analyzed": "2026-04-25T13:00:50.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LANC_1_2022": {
+  "rows": 60798,
+  "analyzed": "2025-05-06T01:01:14.000Z",
+  "columns": [
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_LANC",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LOCAL_PARADA": {
+  "rows": 8,
+  "analyzed": "2025-03-06T02:37:43.000Z",
+  "columns": [
+   [
+    "LOP_DESC",
+    "VARCHAR2(30)"
+   ],
+   [
+    "ID_GRUPO_PARADA",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LOCAL",
+    "NUMBER(3)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_GRUPO_PARADA,ID_LOCAL",
+  "fks": [
+   "ID_GRUPO_PARADA -> GI_LAB_GRUPO_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LOCAL_PARADA_STATUS": {
+  "rows": 8,
+  "analyzed": "2025-03-06T02:37:43.000Z",
+  "columns": [
+   [
+    "ID_GRUPO_PARADA",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LOCAL",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "PST_STATUS",
+    "NUMBER(1)"
+   ],
+   [
+    "PST_DATA_STATUS",
+    "DATE",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_GRUPO_PARADA,ID_LOCAL,PST_DATA_STATUS",
+  "fks": [
+   "ID_GRUPO_PARADA,ID_LOCAL -> GI_LAB_LOCAL_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LOG": {
+  "rows": 60,
+  "analyzed": "2025-03-06T02:37:43.000Z",
+  "columns": [
+   [
+    "LOG_PKEY",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LOG_MODULO",
+    "VARCHAR2(100)"
+   ],
+   [
+    "LOG_COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "LOG_SAF_ANO_SAFRA",
+    "NUMBER(4)"
+   ],
+   [
+    "LOG_ORIGEM",
+    "VARCHAR2(255)"
+   ],
+   [
+    "LOG_TABELA",
+    "VARCHAR2(50)"
+   ],
+   [
+    "LOG_REG_CHAVE",
+    "VARCHAR2(100)"
+   ]
+  ],
+  "pk": "LOG_PKEY",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LOG_CONF_MAT_PROCESSO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:43.000Z",
+  "columns": [
+   [
+    "LOG_MAT_USUARIO",
+    "VARCHAR2(100)"
+   ],
+   [
+    "LOG_MAT_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LOG_MAT_MAQUINA",
+    "VARCHAR2(100)"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "LOG_MAT_OPERACAO",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LOG_MAT_DT_INC",
+    "DATE"
+   ],
+   [
+    "LOG_MAT_DESC_EQP",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LOG_MAT_DESC_MAT",
+    "VARCHAR2(100)"
+   ],
+   [
+    "LOG_MAT_CAPACIDADE",
+    "NUMBER(7)"
+   ],
+   [
+    "LOG_MAT_LT_CM",
+    "NUMBER(8,3)"
+   ],
+   [
+    "LOG_ID_VAR_POL",
+    "VARCHAR2(10)"
+   ],
+   [
+    "LOG_ID_VAR_GL",
+    "VARCHAR2(10)"
+   ],
+   [
+    "LOG_ID_VAR_BRIX",
+    "VARCHAR2(10)"
+   ],
+   [
+    "LOG_MAT_TP_DADO",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LOG_MAT_DATA_EQP",
+    "DATE"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LOG_DB_SELECT": {
+  "rows": 0,
+  "analyzed": "2025-04-26T01:00:08.000Z",
+  "columns": [
+   [
+    "LOG_DB_CODIGO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LOG_DB_DATA_EXECUCAO",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "LOG_DB_DATA_FECHAMENTO",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "LOG_DB_VARIAVEL",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LOG_DB_MOV_COLUNA",
+    "NUMBER(2)"
+   ],
+   [
+    "LOG_DB_FORMULA",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "LOG_DB_TEMPO_EXECUCAO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LOG_DB_USUARIO",
+    "VARCHAR2(50)"
+   ],
+   [
+    "LOG_DB_MAQUINA",
+    "VARCHAR2(50)"
+   ]
+  ],
+  "pk": "LOG_DB_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LOG_DIGITA": {
+  "rows": 2349,
+  "analyzed": "2025-03-06T02:37:44.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "TP_LOG",
+    "NUMBER(1)"
+   ],
+   [
+    "LAN_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "DT_OBRIGA",
+    "DATE"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "FECHADO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,SAF_ANO_SAFRA,ID_VAR,FECHADO",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LOG_ERRO": {
+  "rows": 25,
+  "analyzed": "2025-03-06T02:37:44.000Z",
+  "columns": [
+   [
+    "ID_LOG_ERRO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MODULO",
+    "VARCHAR2(100)"
+   ],
+   [
+    "ERRO",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "DESCRICAO",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "DATA",
+    "DATE"
+   ],
+   [
+    "ID_FECHAMENTO",
+    "NUMBER(10)"
+   ]
+  ],
+  "pk": "ID_LOG_ERRO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LOG_IT": {
+  "rows": 480,
+  "analyzed": "2025-03-06T02:37:44.000Z",
+  "columns": [
+   [
+    "LIT_PKEY",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LIT_LOG_FKEY",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LIT_DATA",
+    "DATE"
+   ],
+   [
+    "LIT_OPERACAO",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LIT_CAMPO",
+    "VARCHAR2(100)"
+   ],
+   [
+    "LIT_VALOR",
+    "VARCHAR2(100)"
+   ],
+   [
+    "LIT_USUARIO",
+    "VARCHAR2(100)"
+   ],
+   [
+    "LIT_MAQUINA",
+    "VARCHAR2(100)"
+   ],
+   [
+    "LIT_COMENTARIO",
+    "VARCHAR2(200)"
+   ]
+  ],
+  "pk": "LIT_PKEY",
+  "fks": [
+   "LIT_LOG_FKEY -> GI_LAB_LOG"
+  ],
+  "uks": []
+ },
+ "GI_LAB_LOG_MATER_PROCESSO": {
+  "rows": 310771,
+  "analyzed": "2025-03-06T02:37:45.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LMP_DT_MOV",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "LMP_PRODUTO",
+    "VARCHAR2(3)",
+    "NOT NULL"
+   ],
+   [
+    "LMP_COD_EQP",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "LMP_VALOR_ANT",
+    "NUMBER(15,3)"
+   ],
+   [
+    "LMP_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LMP_DT_ALT",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "LMP_DT_FEC",
+    "DATE"
+   ],
+   [
+    "LMP_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LMP_USUARIO",
+    "VARCHAR2(20)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LOG_REL": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "LGR_PKEY",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LGR_DATA_LOG",
+    "DATE"
+   ],
+   [
+    "LGR_DATA_INI",
+    "DATE"
+   ],
+   [
+    "LGR_RESPOSTA",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LGR_ACAO",
+    "NUMBER(1)"
+   ],
+   [
+    "LGR_RELATORIO_ID",
+    "NUMBER(10)"
+   ],
+   [
+    "LGR_RELATORIO_NOME",
+    "VARCHAR2(100)"
+   ],
+   [
+    "LGR_USUARIO",
+    "VARCHAR2(100)"
+   ],
+   [
+    "LGR_MAQUINA",
+    "VARCHAR2(100)"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "LGR_RELATORIO_TIPO_ID",
+    "NUMBER(2)"
+   ],
+   [
+    "LGR_MENSAGEM",
+    "VARCHAR2(1000)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_LOG_VALIDA_CHECKLIST": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "LOG_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "LOG_DATA_VALIDACAO",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "LOG_COMENTARIO",
+    "VARCHAR2(2000)",
+    "NOT NULL"
+   ],
+   [
+    "LOG_USUARIO",
+    "VARCHAR2(50)",
+    "NOT NULL"
+   ],
+   [
+    "LOG_MAQUINA",
+    "VARCHAR2(50)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_MENS_CABEC": {
+  "rows": 27,
+  "analyzed": "2025-04-26T01:09:50.000Z",
+  "columns": [
+   [
+    "ID_MENSAGEM",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "MSC_ASSUNTO",
+    "VARCHAR2(20)"
+   ],
+   [
+    "MSC_PROP",
+    "NUMBER(5)"
+   ],
+   [
+    "MSC_ENCERRADA",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "ID_MENSAGEM",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_MENS_DETALHE": {
+  "rows": 31,
+  "analyzed": "2025-08-20T01:02:24.000Z",
+  "columns": [
+   [
+    "ID_MENSAGEM",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "ID_RESP",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_USUARIO_DE",
+    "NUMBER(5)"
+   ],
+   [
+    "ID_USUARIO_PARA",
+    "NUMBER(5)"
+   ],
+   [
+    "MSD_DATA",
+    "DATE"
+   ],
+   [
+    "MSD_MENSAGEM",
+    "VARCHAR2(200)"
+   ],
+   [
+    "MSD_STATUS",
+    "NUMBER(1)"
+   ],
+   [
+    "MSD_PRIORIDADE",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "ID_MENSAGEM,ID_RESP",
+  "fks": [
+   "ID_MENSAGEM -> GI_LAB_MENS_CABEC"
+  ],
+  "uks": []
+ },
+ "GI_LAB_METODO": {
+  "rows": 2,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "ID_METODO",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "MET_DESCRICAO",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "MET_TEXTO",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "MET_ARQUIVO",
+    "VARCHAR2(500)"
+   ]
+  ],
+  "pk": "ID_METODO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_MOT_PARADA": {
+  "rows": 3,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "MOT_DESC",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "MOT_ABV",
+    "VARCHAR2(15)"
+   ],
+   [
+    "ID_MOTIVO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_MOTIVO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_MOT_PARADA_STATUS": {
+  "rows": 3,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "ID_MOTIVO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "PST_STATUS",
+    "NUMBER(1)"
+   ],
+   [
+    "PST_DATA_STATUS",
+    "DATE",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_MOTIVO,PST_DATA_STATUS",
+  "fks": [
+   "ID_MOTIVO -> GI_LAB_MOT_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_NO_PLAN_1": {
+  "rows": 599,
+  "analyzed": "2025-04-26T01:09:50.000Z",
+  "columns": [
+   [
+    "ID_NO_POS",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "ID_NO_ANT",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "NO_DESC",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "NO_COR",
+    "VARCHAR2(10)"
+   ],
+   [
+    "NO_STATUS",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "NO_ORDEM",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "ID_PLAN",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_PAINEL_CEP": {
+  "rows": 31,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_USUARIO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "PNC_LSE",
+    "NUMBER(7,2)",
+    "NOT NULL"
+   ],
+   [
+    "PNC_LIE",
+    "NUMBER(7,2)",
+    "NOT NULL"
+   ],
+   [
+    "PNC_NUM_AMOSTRA",
+    "NUMBER(5)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ID_USUARIO",
+  "fks": [
+   "ID_USUARIO -> PK_GAM_USUARIOS",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_PAINEL_CONF": {
+  "rows": 13,
+  "analyzed": "2025-04-26T01:09:50.000Z",
+  "columns": [
+   [
+    "ID_USUARIO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "PNF_ABRE_INICIO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ],
+   [
+    "PNF_TP_ATUALIZA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "PNF_DT_PADRAO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_USUARIO,COD_EMPR",
+  "fks": [
+   "COD_EMPR -> PK_GA_EMPR",
+   "ID_USUARIO -> PK_GAM_USUARIOS"
+  ],
+  "uks": []
+ },
+ "GI_LAB_PAINEL_REL": {
+  "rows": 14,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_USUARIO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_REL",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "PNR_TIPO",
+    "VARCHAR2(2)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_USUARIO,COD_REL,PNR_TIPO,COD_EMPR",
+  "fks": [
+   "COD_EMPR -> PK_GA_EMPR",
+   "ID_USUARIO -> PK_GAM_USUARIOS"
+  ],
+  "uks": []
+ },
+ "GI_LAB_PAINEL_VAR": {
+  "rows": 72,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "ID_USUARIO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "PNV_TIPO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_USUARIO,ID_VAR,PNV_TIPO",
+  "fks": [
+   "ID_USUARIO -> PK_GAM_USUARIOS",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_PARADA_CAUSA_STATUS": {
+  "rows": 1,
+  "analyzed": "2026-03-21T01:01:00.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_CAUSA_PARADA",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "PNS_STATUS",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "PNS_DATA_DESATIV",
+    "DATE"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_CAUSA_PARADA",
+  "fks": [
+   "ID_CAUSA_PARADA -> GI_LAB_CAUSA_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_PARADA_CLASSE_STATUS": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_SETOR_PARADA",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_CLASSE_PARADA",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "PNS_STATUS",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "PNS_DATA_DESATIV",
+    "DATE"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_SETOR_PARADA,ID_CLASSE_PARADA",
+  "fks": [
+   "ID_CLASSE_PARADA,ID_SETOR_PARADA -> GI_LAB_CLASSE_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_PARADA_EQUIP_STATUS": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_SETOR_PARADA",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_CLASSE_PARADA",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_EQUIP_PARADA",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "PNS_STATUS",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "PNS_DATA_DESATIV",
+    "DATE"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_SETOR_PARADA,ID_CLASSE_PARADA,ID_EQUIP_PARADA",
+  "fks": [
+   "ID_SETOR_PARADA,ID_CLASSE_PARADA,ID_EQUIP_PARADA -> GI_LAB_EQUIP_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_PARADA_SETOR_STATUS": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_SETOR_PARADA",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "PNS_STATUS",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "PNS_DATA_DESATIV",
+    "DATE"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_SETOR_PARADA",
+  "fks": [
+   "ID_SETOR_PARADA -> GI_LAB_SETOR_PARADA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_PARAM_USINA": {
+  "rows": 17,
+  "analyzed": "2025-09-05T01:02:03.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "PAR_DT_INICIO",
+    "DATE"
+   ],
+   [
+    "PAR_DT_FECHA",
+    "DATE"
+   ],
+   [
+    "PAR_DT_FECHA_REAL",
+    "DATE"
+   ],
+   [
+    "PAR_ROLLBACK",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_SEMANA_INI",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_DT_FIM",
+    "DATE"
+   ],
+   [
+    "PAR_DIG_MAN_AUT",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_LIB_FIM_SEMANA",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_LIB_DT_INI",
+    "DATE"
+   ],
+   [
+    "PAR_LIB_DT_FIM",
+    "DATE"
+   ],
+   [
+    "PAR_LIB_HR",
+    "DATE"
+   ],
+   [
+    "PAR_HR_DIA",
+    "DATE"
+   ],
+   [
+    "PAR_CALCULO_AUTO",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_CALCULO_DEP",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_SAFRA_ENCER",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_CALCULO_SAIR",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_VALIDA",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_DIF_HORA",
+    "NUMBER(5)"
+   ],
+   [
+    "PAR_DIF_DT_INI",
+    "DATE"
+   ],
+   [
+    "PAR_DIF_DT_FIM",
+    "DATE"
+   ],
+   [
+    "PAR_MOAGEM_ENCER",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_DT_FIM_SAFRA",
+    "DATE"
+   ],
+   [
+    "PAR_PINTA",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_NOME_GRUPO",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PAR_NOME_LOCAL",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PAR_NOME_MOTIVO",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PAR_NOME_LANCAMENTO",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PAR_VERIF_REL",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "PAR_COD_FERMENTEC",
+    "NUMBER(5)"
+   ],
+   [
+    "PAR_ABV_FERMENTEC",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PAR_ALT_FORMULA",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_VERIFICA_DB_SELECT",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_ALT_DIG_VALOR",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_DIAS_AVANCO",
+    "NUMBER(2)"
+   ],
+   [
+    "PAR_INTERVALO_ATU_PLAN",
+    "NUMBER(6,2)"
+   ],
+   [
+    "PAR_EXPORTAR_DADOS_FECHA",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_CAPAC_PROC_SUPERIOR",
+    "NUMBER(3,2)"
+   ],
+   [
+    "PAR_NOME_SETOR_PARADA",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PAR_NOME_CLASSE_PARADA",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PAR_NOME_EQUIP_PARADA",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PAR_NOME_CAUSA_PARADA",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PAR_NOME_LANC_PARADA",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PAR_DT_FECHA_TURNO",
+    "DATE"
+   ],
+   [
+    "PAR_DT_INICIO_SAFRA",
+    "DATE"
+   ],
+   [
+    "PAR_LANC_MULTIDATA",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_BLOQUEAR_RELATORIO",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_BLOQUEAR_FECHA",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_FECHA_DIA_ATUAL",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_MIN_JUSTIFICATIVA",
+    "NUMBER(2)"
+   ],
+   [
+    "PAR_OBRIGA_VERIFICA_DB_SELECT",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_INDICAVAL_FE",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_UTILIZA_LPD",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_UTILIZA_REDU_MOAGEM",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_UTILIZA_CONSELHO_ANALI",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_UTILIZA_REL_RECORDES",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_UTILIZA_PLAN_ANALI",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_UTILIZA_FERMENTEC",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_DIAS_DB_SELECT",
+    "NUMBER(3)"
+   ],
+   [
+    "PAR_MSG_MONTAGEM",
+    "NUMBER(1)"
+   ],
+   [
+    "PAR_LOG_DB_SELECT",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,SAF_ANO_SAFRA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_PLAN_CONF_GERAL": {
+  "rows": 416,
+  "analyzed": "2025-04-26T01:09:51.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "PCG_DATA_ATUALIZA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "PLC_DIVISAO",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "PLC_INT_DIV_INI",
+    "DATE"
+   ],
+   [
+    "PLC_INT_DIV_FIM",
+    "DATE"
+   ],
+   [
+    "PLC_NVEZES",
+    "NUMBER(3,1)"
+   ],
+   [
+    "PLC_STATUS",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "PLC_TAM_COL",
+    "NUMBER(2)"
+   ]
+  ],
+  "pk": "COD_EMPR,PCG_DATA_ATUALIZA,ID_PLAN",
+  "fks": [
+   "COD_EMPR -> PK_GA_EMPR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_PLAN_CONF_1": {
+  "rows": 416,
+  "analyzed": "2025-04-26T01:09:50.000Z",
+  "columns": [
+   [
+    "PLC_SENT_DIG",
+    "NUMBER(1)"
+   ],
+   [
+    "PLC_DIVISAO",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "PLC_INT_DIV_INI",
+    "DATE"
+   ],
+   [
+    "PLC_INT_DIV_FIM",
+    "DATE"
+   ],
+   [
+    "PLC_NVEZES",
+    "NUMBER(3,1)"
+   ],
+   [
+    "PLC_STATUS",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "PLC_TIPO",
+    "NUMBER(1)"
+   ],
+   [
+    "ID_PLAN",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "PLC_TAM_COL",
+    "NUMBER(2)"
+   ]
+  ],
+  "pk": "ID_PLAN",
+  "fks": [
+   "ID_PLAN -> GI_LAB_NO_PLAN_1"
+  ],
+  "uks": []
+ },
+ "GI_LAB_PQC_CONF_GERAL": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CON_USINA_COPER",
+    "VARCHAR2(10)"
+   ],
+   [
+    "CON_USUARIO_COPER",
+    "VARCHAR2(50)"
+   ],
+   [
+    "CON_SENHA_COPER",
+    "VARCHAR2(50)"
+   ],
+   [
+    "CON_LINK_WEBSERVICE",
+    "VARCHAR2(200)"
+   ]
+  ],
+  "pk": "COD_EMPR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_PQC_ITEM_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "ID_ITV",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "PQC_ID_LAYOUT",
+    "NUMBER(10)"
+   ],
+   [
+    "ITV_TIPO_PRODUTO",
+    "VARCHAR2(1)"
+   ],
+   [
+    "ITV_ID_PRODUTO",
+    "NUMBER(10)"
+   ],
+   [
+    "ITV_ID_TANQUE",
+    "NUMBER(10)"
+   ],
+   [
+    "ITV_ID_ITEM",
+    "NUMBER(10)"
+   ],
+   [
+    "ITV_ID_VAR",
+    "NUMBER(10)"
+   ]
+  ],
+  "pk": "ID_ITV",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_PQC_LAYOUT": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "PQC_COD_LAYOUT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PQC_FORMATO_DATA",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PQC_SEPARADOR_DECIMAL",
+    "VARCHAR2(1)"
+   ],
+   [
+    "PQC_DELIMITADOR",
+    "VARCHAR2(1)"
+   ],
+   [
+    "PQC_DESC_LAYOUT",
+    "VARCHAR2(300)"
+   ],
+   [
+    "PQC_ID_LAYOUT",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "PQC_STATUS_LAYOUT",
+    "VARCHAR2(3)"
+   ],
+   [
+    "PQC_COD_USINA_COPER",
+    "VARCHAR2(10)"
+   ],
+   [
+    "PQC_DESC_USINA_COPER",
+    "VARCHAR2(100)"
+   ],
+   [
+    "PQC_COD_SUPERVISOR",
+    "VARCHAR2(10)"
+   ],
+   [
+    "PQC_DESC_SUPERVISOR",
+    "VARCHAR2(100)"
+   ],
+   [
+    "PQC_SEPARADOR_MILHAR",
+    "VARCHAR2(1)"
+   ],
+   [
+    "PQC_TIPO_LAYOUT",
+    "VARCHAR2(50)"
+   ]
+  ],
+  "pk": "COD_EMPR,PQC_ID_LAYOUT",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_PQC_LAYOUT_ITEM": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:46.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "PQC_ID_LAYOUT",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ITM_DESEJAVEL",
+    "NUMBER(1)"
+   ],
+   [
+    "ITM_DESCRICAO_IMPORTACAO",
+    "VARCHAR2(300)"
+   ],
+   [
+    "ITM_DESC_ITEM",
+    "VARCHAR2(300)"
+   ],
+   [
+    "ITM_OBRIGATORIO",
+    "NUMBER(1)"
+   ],
+   [
+    "ITM_TIPO",
+    "VARCHAR2(50)"
+   ],
+   [
+    "ITM_ID_TIPO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ITM_ID_ITEM",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ITM_ORDEM",
+    "NUMBER(10)"
+   ]
+  ],
+  "pk": "COD_EMPR,PQC_ID_LAYOUT,ITM_ID_ITEM,ITM_ID_TIPO",
+  "fks": [
+   "COD_EMPR,PQC_ID_LAYOUT -> GI_LAB_PQC_LAYOUT"
+  ],
+  "uks": []
+ },
+ "GI_LAB_PQC_LOG": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "LOG_USUARIO",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LOG_DATA_HORA",
+    "DATE"
+   ],
+   [
+    "LOG_QTD_ITENS_EXPORT",
+    "NUMBER(10)"
+   ],
+   [
+    "LOG_USINA_PQC",
+    "VARCHAR2(10)"
+   ],
+   [
+    "LOG_LAYOUT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LOG_PRODUTO",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LOG_TANQUE",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LOG_MAQUINA",
+    "VARCHAR2(100)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_PQC_PRODUTO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "ID_PRD",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "PRD_COD_PRODUTO",
+    "VARCHAR2(20)"
+   ],
+   [
+    "PRD_DESC_PRODUTO",
+    "VARCHAR2(100)"
+   ],
+   [
+    "PRD_TIPO",
+    "VARCHAR2(100)"
+   ]
+  ],
+  "pk": "ID_PRD",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_PQC_TANQUE": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "TQE_COD_USINA_COPER",
+    "VARCHAR2(10)"
+   ],
+   [
+    "TQE_DESC_USINA_COPER",
+    "VARCHAR2(100)"
+   ],
+   [
+    "ID_TQE",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "TQE_COD_TANQUE",
+    "VARCHAR2(20)"
+   ],
+   [
+    "TQE_CAPACIDADE",
+    "NUMBER(15,5)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_TQE",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_PRODUTO_CATEG": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_CATEG",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "CAT_DESC",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "CAT_ABV",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_CATEG",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RASTREA": {
+  "rows": 13302,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "RAS_MAQUINA",
+    "VARCHAR2(30)"
+   ],
+   [
+    "RAS_USUARIO",
+    "VARCHAR2(30)"
+   ],
+   [
+    "RAS_DATA",
+    "DATE"
+   ],
+   [
+    "RAS_ID_VAR",
+    "NUMBER(6)"
+   ],
+   [
+    "RAS_FORMULA",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "RAS_MED_PLAN",
+    "VARCHAR2(1)"
+   ],
+   [
+    "RAS_MED_ACUM",
+    "VARCHAR2(1)"
+   ],
+   [
+    "RAS_ID_POND",
+    "NUMBER(6)"
+   ],
+   [
+    "RAS_ALT_FORMULA",
+    "VARCHAR2(2000)"
+   ],
+   [
+    "RAS_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "RAS_VAR_STATUS",
+    "NUMBER(1)"
+   ],
+   [
+    "RAS_VAR_PRE_MOAGEM",
+    "NUMBER(1)"
+   ],
+   [
+    "RAS_VAR_SAFRA",
+    "NUMBER(1)"
+   ],
+   [
+    "RAS_VAR_UNIDADE",
+    "NUMBER(3)"
+   ],
+   [
+    "RAS_VAR_ORI_DADOS",
+    "NUMBER(1)"
+   ],
+   [
+    "RAS_VAR_TIPO_DIG",
+    "NUMBER(1)"
+   ],
+   [
+    "RAS_VAR_MAS_INT",
+    "NUMBER(2)"
+   ],
+   [
+    "RAS_VAR_MAS_DEC",
+    "NUMBER(2)"
+   ],
+   [
+    "RAS_VAR_POND_ZERO",
+    "VARCHAR2(1)"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RASTREA_FECHAMENTO": {
+  "rows": 16592,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "RAS_MAQUINA",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "RAS_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "RAS_USUARIO",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "RAS_VARIAVEIS",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "RAS_DATA_FEC",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "RAS_CANCELOU",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ],
+   [
+    "RAS_CANC_DATA",
+    "DATE"
+   ],
+   [
+    "RAS_TEMPO_FECHA",
+    "NUMBER(6)"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "RAS_VARIAVEIS_NO_FECHA_AUX",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "RAS_VAR_SEM_ACUM",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "RAS_ID_FECHAMENTO",
+    "NUMBER(10)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_REDU_MOAGEM_EQPTO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_EQPTO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "RME_DESC",
+    "VARCHAR2(100)",
+    "NOT NULL"
+   ],
+   [
+    "RME_ROTACAO_PADRAO",
+    "NUMBER(11,3)",
+    "NOT NULL"
+   ],
+   [
+    "RME_TONELADAS_HORA",
+    "NUMBER(10,2)",
+    "NOT NULL"
+   ],
+   [
+    "RME_TIPO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ],
+   [
+    "RME_MOAGEM_TOTAL_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "RME_HORAS_DIA",
+    "NUMBER(10)"
+   ],
+   [
+    "DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "RME_STATUS",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_EQPTO,DATA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_REDU_MOAGEM_GRUPO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "ID_GRUPO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "RMG_DESC",
+    "VARCHAR2(100)"
+   ]
+  ],
+  "pk": "ID_GRUPO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_REDU_MOAGEM_LANC": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_EQPTO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_MOTIVO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_GRUPO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LOCAL",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "RLA_DATA_INICIO",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "RLA_DATA_FIM",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "RLA_ROTACAO_REDUZIDA",
+    "NUMBER(11,3)",
+    "NOT NULL"
+   ],
+   [
+    "RLA_MOAGEM_PERDIDA",
+    "NUMBER(10,2)",
+    "NOT NULL"
+   ],
+   [
+    "RLA_TEMPO_REDUCAO",
+    "VARCHAR2(5)",
+    "NOT NULL"
+   ],
+   [
+    "RLA_OBSERVACAO",
+    "VARCHAR2(2000)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_EQPTO,ID_MOTIVO,ID_GRUPO,ID_LOCAL,RLA_DATA_INICIO,RLA_DATA_FIM",
+  "fks": [
+   "ID_GRUPO -> GI_LAB_REDU_MOAGEM_GRUPO",
+   "ID_LOCAL -> GI_LAB_REDU_MOAGEM_LOCAL",
+   "ID_MOTIVO -> GI_LAB_REDU_MOAGEM_MOTIVO"
+  ],
+  "uks": []
+ },
+ "GI_LAB_REDU_MOAGEM_LOCAL": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "ID_GRUPO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LOCAL",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "RML_DESC",
+    "VARCHAR2(100)"
+   ]
+  ],
+  "pk": "ID_LOCAL",
+  "fks": [
+   "ID_GRUPO -> GI_LAB_REDU_MOAGEM_GRUPO"
+  ],
+  "uks": []
+ },
+ "GI_LAB_REDU_MOAGEM_MOTIVO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "ID_MOTIVO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "RMM_DESC",
+    "VARCHAR2(100)",
+    "NOT NULL"
+   ],
+   [
+    "RMM_ABV",
+    "VARCHAR2(50)"
+   ]
+  ],
+  "pk": "ID_MOTIVO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_REL_ANP": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ARL_COD",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "ARL_DESC",
+    "VARCHAR2(40)"
+   ],
+   [
+    "ARL_CAMINHO",
+    "VARCHAR2(500)"
+   ],
+   [
+    "ARL_RAZAO_SOCIAL",
+    "VARCHAR2(100)"
+   ],
+   [
+    "ARL_RESP_NOME",
+    "VARCHAR2(40)"
+   ],
+   [
+    "ARL_RESP_TEL",
+    "VARCHAR2(40)"
+   ],
+   [
+    "ARL_RESP_EMAIL",
+    "VARCHAR2(40)"
+   ],
+   [
+    "ARL_ALC_ANID",
+    "VARCHAR2(1)"
+   ],
+   [
+    "ARL_ALC_HIDR",
+    "VARCHAR2(1)"
+   ],
+   [
+    "ARL_COD_INST",
+    "NUMBER(7)",
+    "NOT NULL"
+   ],
+   [
+    "ARL_COD_AGENTE",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ARL_SELECT_ERP",
+    "VARCHAR2(4000)"
+   ]
+  ],
+  "pk": "COD_EMPR,ARL_COD",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_REL_ANP_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ARL_COD",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "ARV_CARAC",
+    "VARCHAR2(50)",
+    "NOT NULL"
+   ],
+   [
+    "ARV_CARAC_UNID",
+    "VARCHAR2(15)"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "ARV_COD_AGEN",
+    "VARCHAR2(20)"
+   ],
+   [
+    "ARV_COD_INST",
+    "VARCHAR2(20)"
+   ],
+   [
+    "ARV_TIPO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ],
+   [
+    "ARV_ORDEM",
+    "NUMBER(6)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,ARL_COD,ARV_CARAC,ARV_TIPO,ARV_ORDEM",
+  "fks": [
+   "COD_EMPR,ARL_COD -> GI_LAB_REL_ANP",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_REL_LPD": {
+  "rows": 1,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LPD_PARTE",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "LPD_DESTILARIA",
+    "VARCHAR2(50)"
+   ],
+   [
+    "LPD_DEST_MUNICIPIO",
+    "VARCHAR2(50)"
+   ],
+   [
+    "LPD_DEST_END_POSTAL",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LPD_PROPRIETARIO",
+    "VARCHAR2(50)"
+   ],
+   [
+    "LPD_ESTADO",
+    "VARCHAR2(2)"
+   ],
+   [
+    "LPD_END_TELEGRAFICO",
+    "VARCHAR2(50)"
+   ],
+   [
+    "LPD_DEPOSITO",
+    "VARCHAR2(50)"
+   ],
+   [
+    "LPD_DEP_MUNICIPIO",
+    "VARCHAR2(50)"
+   ],
+   [
+    "LPD_DEP_END_POSTAL",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LPD_CAMINHO",
+    "VARCHAR2(500)"
+   ],
+   [
+    "LPD_ASS_DIGITAL",
+    "VARCHAR2(500)"
+   ],
+   [
+    "LPD_COL6",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LPD_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "LPD_COL_CANA_MOIDA",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_PROD_ENT",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_PROD_ENT_TOTAL",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_SAIDA",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_SAIDA_TOTAL",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_ESTOQUE",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_ESTOQUE_TOTAL",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_CAMINHO_AGA",
+    "VARCHAR2(500)"
+   ],
+   [
+    "LPD_COL_CANA_MOIDA_2",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_PROD_ENT_2",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_PROD_ENT_TOTAL_2",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_SAIDA_2",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_SAIDA_TOTAL_2",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_ESTOQUE_2",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_ESTOQUE_TOTAL_2",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_COL_AGA",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LPD_MODULO_EXTERNO",
+    "NUMBER(5)"
+   ]
+  ],
+  "pk": "COD_EMPR,LPD_PARTE,LPD_DATA",
+  "fks": [
+   "COD_EMPR -> PK_GA_EMPR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_REL_LPD_CONSOLIDA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LPD_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "LPD_QUINZENA",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "LPD_PARTE",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "LPD_DATA_CONSOLIDA",
+    "DATE"
+   ],
+   [
+    "LPD_USUARIO_CONSOLIDA",
+    "VARCHAR2(100)"
+   ],
+   [
+    "LPD_PAGINA",
+    "NUMBER(2)"
+   ],
+   [
+    "LPD_ARQUIVO",
+    "BLOB"
+   ],
+   [
+    "LPD_OBS_DIG",
+    "VARCHAR2(1000)"
+   ],
+   [
+    "LPD_SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,LPD_DATA,LPD_QUINZENA,LPD_PARTE,LPD_SAF_ANO_SAFRA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_REL_LPD_OBS": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LPD_PARTE",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "LPD_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_OBSERVACAO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "OBS_DESCRICAO",
+    "VARCHAR2(100)"
+   ],
+   [
+    "OBS_QUERY",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "OBS_MENSAGEM",
+    "VARCHAR2(200)"
+   ],
+   [
+    "OBS_ORDEM",
+    "NUMBER(10)"
+   ]
+  ],
+  "pk": "COD_EMPR,LPD_PARTE,LPD_DATA,ID_OBSERVACAO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_REL_LPD_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LPD_PARTE",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "LPV_TIPO",
+    "VARCHAR2(4)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LPV_ORDEM",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "LPV_COL_DESC",
+    "VARCHAR2(10)"
+   ],
+   [
+    "LPD_DATA",
+    "DATE",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [
+   "COD_EMPR,LPD_PARTE,LPD_DATA -> GI_LAB_REL_LPD",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_REL_PLANO_ANALITICO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_REL_PLANO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "RPA_TITULO",
+    "VARCHAR2(60)",
+    "NOT NULL"
+   ],
+   [
+    "RPA_SUB_TITULO",
+    "VARCHAR2(60)"
+   ],
+   [
+    "RPA_DATA_REVISAO",
+    "DATE"
+   ],
+   [
+    "RPA_DATA_ELABORACAO",
+    "DATE"
+   ],
+   [
+    "RPA_NOME_ELABORADOR",
+    "VARCHAR2(100)"
+   ],
+   [
+    "RPA_NOME_REVISOR",
+    "VARCHAR2(100)"
+   ],
+   [
+    "RPA_NOME_APROVADOR",
+    "VARCHAR2(100)"
+   ],
+   [
+    "RPA_REVISAO",
+    "NUMBER(3)"
+   ],
+   [
+    "RPA_SALVAR_PDF",
+    "NUMBER(1)"
+   ],
+   [
+    "RPA_CARGO_ELABORADOR",
+    "VARCHAR2(200)"
+   ],
+   [
+    "RPA_CARGO_REVISOR",
+    "VARCHAR2(200)"
+   ],
+   [
+    "RPA_CARGO_APROVADOR",
+    "VARCHAR2(200)"
+   ]
+  ],
+  "pk": "ID_REL_PLANO,COD_EMPR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_REL_PLANO_ANALI_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_REL_PLANO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "RPV_FREQ",
+    "VARCHAR2(200)"
+   ],
+   [
+    "RPV_NUM_FREQ",
+    "VARCHAR2(200)"
+   ],
+   [
+    "RPV_FORMA_AMOSTRAGEM",
+    "VARCHAR2(200)"
+   ],
+   [
+    "RPV_LOCAL_AMOSTRAGEM",
+    "VARCHAR2(200)"
+   ],
+   [
+    "RPV_LAB_ANALISE",
+    "VARCHAR2(200)"
+   ],
+   [
+    "RPV_METODO",
+    "VARCHAR2(200)"
+   ],
+   [
+    "RPV_RESPONSAVEL",
+    "VARCHAR2(200)"
+   ],
+   [
+    "RPV_REGISTRO",
+    "VARCHAR2(200)"
+   ],
+   [
+    "RPV_ORDEM",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "RPV_COR",
+    "VARCHAR2(15)"
+   ],
+   [
+    "RPV_COR_FONTE",
+    "VARCHAR2(15)"
+   ],
+   [
+    "RPV_ESTILO_FONTE",
+    "VARCHAR2(3)"
+   ],
+   [
+    "RPV_STATUS",
+    "VARCHAR2(1)"
+   ],
+   [
+    "VAR_NOM_ANALI",
+    "VARCHAR2(100)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_REL_PLANO,RPV_ORDEM",
+  "fks": [
+   "ID_REL_PLANO,COD_EMPR -> GI_LAB_REL_PLANO_ANALITICO",
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_REL_PRODUCAO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "RMA_CULTURA",
+    "VARCHAR2(50)"
+   ],
+   [
+    "RMA_MATERIA",
+    "VARCHAR2(50)"
+   ],
+   [
+    "RMA_TITULO",
+    "VARCHAR2(200)"
+   ],
+   [
+    "RMA_MATERIA_TON",
+    "NUMBER(10)"
+   ],
+   [
+    "RMA_MATERIA_KG",
+    "NUMBER(10)"
+   ],
+   [
+    "RMA_PROPRIA_TON",
+    "NUMBER(10)"
+   ],
+   [
+    "RMA_PROPRIA_KG",
+    "NUMBER(10)"
+   ],
+   [
+    "RMA_FORNECEDORES_TON",
+    "NUMBER(10)"
+   ],
+   [
+    "RMA_FORNECEDORES_KG",
+    "NUMBER(10)"
+   ]
+  ],
+  "pk": "COD_EMPR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_REL_PRODUCAO_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "RMA_ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "RMA_PARTE",
+    "NUMBER(1)"
+   ],
+   [
+    "RMA_LINHA",
+    "NUMBER(1)"
+   ],
+   [
+    "RMA_TAG",
+    "VARCHAR2(3)"
+   ],
+   [
+    "RMA_COLUNA",
+    "VARCHAR2(20)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_REL_RES_ITEM": {
+  "rows": 600,
+  "analyzed": "2025-03-06T02:37:48.000Z",
+  "columns": [
+   [
+    "ITE_COLUNA",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "ITE_SEQ",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "ID_REL",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "ITE_ITEM",
+    "VARCHAR2(60)"
+   ],
+   [
+    "ITE_DIVISAO",
+    "VARCHAR2(1)"
+   ]
+  ],
+  "pk": "ITE_COLUNA,ITE_SEQ,ID_REL,COD_EMPR",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_REL_RESUMO": {
+  "rows": 6,
+  "analyzed": "2025-03-06T02:37:47.000Z",
+  "columns": [
+   [
+    "ID_REL",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "REL_CABEC",
+    "VARCHAR2(80)",
+    "NOT NULL"
+   ],
+   [
+    "REL_COLUNAS",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_REL,COD_EMPR",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_CONSELHO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:20.000Z",
+  "columns": [
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "TIPO_COLUNA",
+    "VARCHAR2(3)"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_ESPEC": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:20.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_LANC",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(100)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_NOME",
+    "VARCHAR2(50)"
+   ],
+   [
+    "LAN_TIPO_COLUNA",
+    "NUMBER(2)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(2)"
+   ],
+   [
+    "LAN_VALOR",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2006": {
+  "rows": 539,
+  "analyzed": "2025-03-06T02:37:48.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2007": {
+  "rows": 401682,
+  "analyzed": "2025-03-06T02:37:48.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2008": {
+  "rows": 505687,
+  "analyzed": "2025-03-06T02:37:50.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2009": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:37:53.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2010": {
+  "rows": 571242,
+  "analyzed": "2025-03-06T02:37:53.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2011": {
+  "rows": 647929,
+  "analyzed": "2025-03-06T02:37:56.000Z",
+  "columns": [
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2012": {
+  "rows": 532697,
+  "analyzed": "2025-03-06T02:38:00.000Z",
+  "columns": [
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2013": {
+  "rows": 338917,
+  "analyzed": "2025-03-06T02:38:03.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(100)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2014": {
+  "rows": 871646,
+  "analyzed": "2025-03-06T02:38:05.000Z",
+  "columns": [
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2015": {
+  "rows": 937780,
+  "analyzed": "2025-03-06T02:38:15.000Z",
+  "columns": [
+   [
+    "ID_USUARIO",
+    "NUMBER(5)"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(20)"
+   ]
+  ],
+  "fks": [
+   "ID_USUARIO -> PK_GAM_USUARIOS"
+  ],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2016": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:38:20.000Z",
+  "columns": [
+   [
+    "ID_USUARIO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(20)"
+   ]
+  ],
+  "fks": [
+   "ID_USUARIO -> PK_GAM_USUARIOS"
+  ],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2017": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:38:20.000Z",
+  "columns": [
+   [
+    "ID_USUARIO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(20)"
+   ]
+  ],
+  "fks": [
+   "ID_USUARIO -> PK_GAM_USUARIOS"
+  ],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2018": {
+  "rows": 875437,
+  "analyzed": "2025-03-06T02:38:26.000Z",
+  "columns": [
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ],
+   [
+    "ID_USUARIO",
+    "NUMBER(5)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2019": {
+  "rows": 1003304,
+  "analyzed": "2025-03-06T02:38:36.000Z",
+  "columns": [
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2020": {
+  "rows": 955612,
+  "analyzed": "2025-03-06T02:38:48.000Z",
+  "columns": [
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2021": {
+  "rows": 1000775,
+  "analyzed": "2025-03-06T02:38:59.000Z",
+  "columns": [
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_RESP_LANC_1_2022": {
+  "rows": 1123373,
+  "analyzed": "2025-03-06T02:39:05.000Z",
+  "columns": [
+   [
+    "LAN_USUARIO",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_DATA_HORA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ID_LANC",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MOV_COLUNA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "LAN_VALOR_ANT",
+    "VARCHAR2(20)"
+   ],
+   [
+    "LAN_FLAG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "LAN_DATA_FEC",
+    "DATE"
+   ],
+   [
+    "LAN_COMENTA",
+    "VARCHAR2(200)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_SETOR_PARADA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:20.000Z",
+  "comment": "Cadastro de Setores (Nivel 1)",
+  "columns": [
+   [
+    "ID_SETOR_PARADA",
+    "NUMBER(10)",
+    "NOT NULL",
+    "Código de identificação do Setor"
+   ],
+   [
+    "STP_DESC",
+    "VARCHAR2(30)",
+    "NOT NULL",
+    "Descrição"
+   ],
+   [
+    "STP_ABV",
+    "VARCHAR2(15)",
+    "NOT NULL",
+    "Abreviação"
+   ]
+  ],
+  "pk": "ID_SETOR_PARADA",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_SMS_CONTA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:20.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "CON_USUARIO",
+    "VARCHAR2(15)",
+    "NOT NULL"
+   ],
+   [
+    "CON_SENHA",
+    "VARCHAR2(50)"
+   ],
+   [
+    "CON_BASE64",
+    "VARCHAR2(200)"
+   ],
+   [
+    "CON_PROXY",
+    "VARCHAR2(30)"
+   ],
+   [
+    "CON_PROXY_USUARIO",
+    "VARCHAR2(30)"
+   ],
+   [
+    "CON_PROXY_SENHA",
+    "VARCHAR2(30)"
+   ]
+  ],
+  "pk": "COD_EMPR,CON_USUARIO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_SMS_DESTINO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:20.000Z",
+  "columns": [
+   [
+    "DST_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "DST_NOME",
+    "VARCHAR2(30)"
+   ],
+   [
+    "DST_CELULAR",
+    "VARCHAR2(12)"
+   ]
+  ],
+  "pk": "DST_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_SMS_MENSAGEM": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:20.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "MSG_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "MSG_DESC",
+    "VARCHAR2(30)"
+   ]
+  ],
+  "pk": "COD_EMPR,MSG_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_SMS_MENS_DEST": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "MSG_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "DST_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,MSG_CODIGO,DST_CODIGO",
+  "fks": [
+   "DST_CODIGO -> GI_LAB_SMS_DESTINO",
+   "COD_EMPR,MSG_CODIGO -> GI_LAB_SMS_MENSAGEM"
+  ],
+  "uks": []
+ },
+ "GI_LAB_SMS_MENS_VAR": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "MSG_CODIGO",
+    "NUMBER(5)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "MSV_COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "MSV_RETORNO",
+    "VARCHAR2(3)",
+    "NOT NULL"
+   ],
+   [
+    "MSV_VAR_SMS",
+    "VARCHAR2(10)",
+    "NOT NULL"
+   ],
+   [
+    "MSV_COMPARA",
+    "VARCHAR2(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,MSG_CODIGO,ID_VAR,MSV_COD_EMPR,MSV_RETORNO",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "COD_EMPR,MSG_CODIGO -> GI_LAB_SMS_MENSAGEM"
+  ],
+  "uks": []
+ },
+ "GI_LAB_SMS_STATUS_MENS": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "ID_SMS",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "DATA_CONSULTA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "DSC_USUARIO",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "DESTINO_SMS",
+    "VARCHAR2(15)",
+    "NOT NULL"
+   ],
+   [
+    "MENSAGEM_SMS",
+    "VARCHAR2(150)",
+    "NOT NULL"
+   ],
+   [
+    "DATA_ENVIO_SMS",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "ERRO_SMS",
+    "NUMBER(2)"
+   ],
+   [
+    "STATUS_SMS",
+    "NUMBER(2)"
+   ],
+   [
+    "MSG_FECHAMENTO",
+    "VARCHAR2(1000)"
+   ],
+   [
+    "DETALHE_SMS",
+    "NUMBER(3)"
+   ]
+  ],
+  "pk": "ID_SMS",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_SUGAR_LAB": {
+  "rows": 2924,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "NO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "SAMPLETYPE",
+    "VARCHAR2(255)",
+    "NOT NULL"
+   ],
+   [
+    "SAMPLEID",
+    "VARCHAR2(255)"
+   ],
+   [
+    "BRIXVALUE",
+    "VARCHAR2(255)"
+   ],
+   [
+    "BRIXTEMP",
+    "VARCHAR2(255)"
+   ],
+   [
+    "EBRIX",
+    "VARCHAR2(255)"
+   ],
+   [
+    "POLVALUE",
+    "VARCHAR2(255)"
+   ],
+   [
+    "POLTEMP",
+    "VARCHAR2(255)"
+   ],
+   [
+    "EPOL",
+    "VARCHAR2(255)"
+   ],
+   [
+    "PURITY",
+    "VARCHAR2(255)"
+   ],
+   [
+    "PHVALUE",
+    "VARCHAR2(255)"
+   ],
+   [
+    "PHTEMP",
+    "VARCHAR2(255)"
+   ],
+   [
+    "COND",
+    "VARCHAR2(255)"
+   ],
+   [
+    "CONDTEMP",
+    "VARCHAR2(255)"
+   ],
+   [
+    "ASHBRIX",
+    "VARCHAR2(255)"
+   ],
+   [
+    "ASHBRIXTEMP",
+    "VARCHAR2(255)"
+   ],
+   [
+    "ASH",
+    "VARCHAR2(255)"
+   ],
+   [
+    "ABSVALUE",
+    "VARCHAR2(255)"
+   ],
+   [
+    "ABSWAVE",
+    "VARCHAR2(255)"
+   ],
+   [
+    "REFCOLORVALUE",
+    "VARCHAR2(255)"
+   ],
+   [
+    "SCOBRIXVALUE",
+    "VARCHAR2(255)"
+   ],
+   [
+    "SCOBRIXTEMP",
+    "VARCHAR2(255)"
+   ],
+   [
+    "SCW",
+    "VARCHAR2(255)"
+   ],
+   [
+    "SCR",
+    "VARCHAR2(255)"
+   ],
+   [
+    "SCE",
+    "VARCHAR2(255)"
+   ],
+   [
+    "WEIGHT",
+    "VARCHAR2(255)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_SUPERVISORIO": {
+  "rows": 115,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "SUP_DESC",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "SUP_TEMPO",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "SUP_CODIGO",
+    "VARCHAR2(6)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,SUP_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_SUP_VAR": {
+  "rows": 653,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "SUV_ORDEM",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SUV_ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "SUP_CODIGO",
+    "VARCHAR2(6)",
+    "NOT NULL"
+   ],
+   [
+    "SUV_DESC",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "SUV_VAR_MIN",
+    "NUMBER(15,6)",
+    "NOT NULL"
+   ],
+   [
+    "SUV_VAR_MAX",
+    "NUMBER(15,6)",
+    "NOT NULL"
+   ],
+   [
+    "SUV_TP_GRAF",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SUV_LIMITE_INF",
+    "NUMBER(15,5)"
+   ],
+   [
+    "SUV_LIMITE_SUP",
+    "NUMBER(15,5)"
+   ],
+   [
+    "SUV_USA_ESPEC_VAR",
+    "NUMBER(1)"
+   ],
+   [
+    "SUV_USA_CONSELHO",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,SUV_ORDEM,SUV_ID_VAR,SUP_CODIGO",
+  "fks": [
+   "SUV_ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_TAB_CONV_GRAU": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "TEMPERATURA",
+    "NUMBER(3,1)",
+    "NOT NULL"
+   ],
+   [
+    "MASSA_ESP_LIDA",
+    "NUMBER(5,4)",
+    "NOT NULL"
+   ],
+   [
+    "MASSA_ESP_20",
+    "NUMBER(5,4)",
+    "NOT NULL"
+   ],
+   [
+    "FATOR_CORRE_VOL",
+    "NUMBER(5,4)",
+    "NOT NULL"
+   ],
+   [
+    "GRAU_ALC_INPM",
+    "NUMBER(4,1)",
+    "NOT NULL"
+   ],
+   [
+    "GRAU_ALC_VOL",
+    "NUMBER(4,1)",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_TAB_DENS_BRIX": {
+  "rows": 971,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "TDB_BRIX",
+    "NUMBER(3,1)",
+    "NOT NULL"
+   ],
+   [
+    "TDB_DENSIDADE",
+    "NUMBER(7,3)"
+   ]
+  ],
+  "pk": "TDB_BRIX",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_TABELAS": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "TAB_TIPO",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "TAB_COL1",
+    "NUMBER(10,5)",
+    "NOT NULL"
+   ],
+   [
+    "TAB_COL2",
+    "NUMBER(10,5)"
+   ],
+   [
+    "TAB_COL3",
+    "NUMBER(10,5)"
+   ],
+   [
+    "TAB_COL4",
+    "NUMBER(10,5)"
+   ],
+   [
+    "TAB_COL5",
+    "NUMBER(10,5)"
+   ],
+   [
+    "TAB_COL6",
+    "NUMBER(10,5)"
+   ],
+   [
+    "TAB_COL7",
+    "NUMBER(10,5)"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_TAB_GENERICA": {
+  "rows": 938,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "GEN_CODIGO",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)"
+   ],
+   [
+    "GEN_CAMPO1",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "GEN_CAMPO2",
+    "VARCHAR2(20)"
+   ],
+   [
+    "GEN_DATA_VIGENCIA",
+    "DATE",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [
+   "GEN_CODIGO -> GI_LAB_TAB_GENERICA_CAD"
+  ],
+  "uks": []
+ },
+ "GI_LAB_TAB_GENERICA_CAD": {
+  "rows": 27,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "GEN_CODIGO",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "GEC_USA_EMPR",
+    "VARCHAR2(1)"
+   ],
+   [
+    "GEC_NOME_TAB",
+    "VARCHAR2(20)"
+   ],
+   [
+    "GEC_TIPO_CAMPO1",
+    "VARCHAR2(2)"
+   ],
+   [
+    "GEC_DESC_CAMPO1",
+    "VARCHAR2(20)"
+   ],
+   [
+    "GEC_MAS_INT1",
+    "NUMBER(4)"
+   ],
+   [
+    "GEC_MAS_DEC1",
+    "NUMBER(4)"
+   ],
+   [
+    "GEC_TAM_COL1",
+    "NUMBER(2)"
+   ],
+   [
+    "GEC_TIPO_CAMPO2",
+    "VARCHAR2(2)"
+   ],
+   [
+    "GEC_DESC_CAMPO2",
+    "VARCHAR2(20)"
+   ],
+   [
+    "GEC_MAS_INT2",
+    "NUMBER(4)"
+   ],
+   [
+    "GEC_MAS_DEC2",
+    "NUMBER(4)"
+   ],
+   [
+    "GEC_TAM_COL2",
+    "NUMBER(2)"
+   ],
+   [
+    "GEC_MAT_PROCESSO",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "GEN_CODIGO",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_TAB_GRANULOMETRIA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "PESO_14",
+    "NUMBER(5,2)"
+   ],
+   [
+    "ABERTURA_14",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PESO_16",
+    "NUMBER(5,2)"
+   ],
+   [
+    "ABERTURA_16",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PESO_18",
+    "NUMBER(5,2)"
+   ],
+   [
+    "ABERTURA_18",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PESO_20",
+    "NUMBER(5,2)"
+   ],
+   [
+    "ABERTURA_20",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PESO_25",
+    "NUMBER(5,2)"
+   ],
+   [
+    "ABERTURA_25",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PESO_30",
+    "NUMBER(5,2)"
+   ],
+   [
+    "ABERTURA_30",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PESO_35",
+    "NUMBER(5,2)"
+   ],
+   [
+    "ABERTURA_35",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PESO_40",
+    "NUMBER(5,2)"
+   ],
+   [
+    "ABERTURA_40",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PESO_45",
+    "NUMBER(5,2)"
+   ],
+   [
+    "ABERTURA_45",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PESO_60",
+    "NUMBER(5,2)"
+   ],
+   [
+    "ABERTURA_60",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PESO_70",
+    "NUMBER(5,2)"
+   ],
+   [
+    "ABERTURA_70",
+    "NUMBER(6,3)"
+   ],
+   [
+    "PESO_FUNDO",
+    "NUMBER(5,2)"
+   ]
+  ],
+  "pk": "COD_EMPR",
+  "fks": [
+   "COD_EMPR -> PK_GA_EMPR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_TAB_ME_ALCOOL": {
+  "rows": 341,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "MEA_INPM",
+    "NUMBER(4,1)",
+    "NOT NULL"
+   ],
+   [
+    "MEA_ME15",
+    "NUMBER(5,4)",
+    "NOT NULL"
+   ],
+   [
+    "MEA_ME15_56",
+    "NUMBER(5,4)",
+    "NOT NULL"
+   ],
+   [
+    "MEA_ME20",
+    "NUMBER(4,1)",
+    "NOT NULL"
+   ],
+   [
+    "MEA_D15_15",
+    "NUMBER(5,4)",
+    "NOT NULL"
+   ],
+   [
+    "MEA_D15_56_15_56",
+    "NUMBER(5,4)",
+    "NOT NULL"
+   ],
+   [
+    "MEA_D20_20",
+    "NUMBER(5,4)",
+    "NOT NULL"
+   ],
+   [
+    "MEA_V15",
+    "NUMBER(5,2)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "MEA_INPM",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_TANQUE_EST": {
+  "rows": 13,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_TANQUE",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "DSC_TANQUE",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "TAN_CAPAC",
+    "NUMBER(12)",
+    "NOT NULL"
+   ],
+   [
+    "TAN_FATOR",
+    "NUMBER(12,6)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_TANQUE",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_TANQUE_MED": {
+  "rows": 3,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_TANQUE",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "DSC_TANQUE",
+    "VARCHAR2(40)",
+    "NOT NULL"
+   ],
+   [
+    "TAN_CAPAC",
+    "NUMBER(12)",
+    "NOT NULL"
+   ],
+   [
+    "TAN_FATOR",
+    "NUMBER(12,6)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_TANQUE",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_UNIDADE": {
+  "rows": 119,
+  "analyzed": "2025-05-06T01:01:13.000Z",
+  "columns": [
+   [
+    "UNI_DESC",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "UNI_ABV",
+    "VARCHAR2(20)",
+    "NOT NULL"
+   ],
+   [
+    "ID_UNIDADE",
+    "NUMBER(3)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_UNIDADE",
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_VALIDA_FECHA": {
+  "rows": 1,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "DATA_ULTFECHA",
+    "DATE",
+    "NOT NULL"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "GI_LAB_VAR": {
+  "rows": 3915,
+  "analyzed": "2026-07-17T01:00:59.000Z",
+  "columns": [
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ],
+   [
+    "ID_UNIDADE",
+    "NUMBER(3)"
+   ],
+   [
+    "VAR_NOM_ANALI",
+    "VARCHAR2(30)",
+    "NOT NULL"
+   ],
+   [
+    "VAR_NOM_VAR",
+    "VARCHAR2(15)",
+    "NOT NULL"
+   ],
+   [
+    "VAR_TIPO_DIG",
+    "NUMBER(1)",
+    "NOT NULL"
+   ],
+   [
+    "VAR_MAS_INT",
+    "NUMBER(2)"
+   ],
+   [
+    "VAR_MAS_DEC",
+    "NUMBER(2)"
+   ],
+   [
+    "VAR_ORI_DADOS",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "VAR_TIPO_MEDIA",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "VAR_ORI_POND",
+    "NUMBER(10)"
+   ],
+   [
+    "VAR_ERRO_MIN_VALOR",
+    "NUMBER(15,5)"
+   ],
+   [
+    "VAR_ERRO_MAX_VALOR",
+    "NUMBER(15,5)"
+   ],
+   [
+    "VAR_ERRO_MIN_MEN",
+    "VARCHAR2(60)"
+   ],
+   [
+    "VAR_ERRO_MAX_MEN",
+    "VARCHAR2(60)"
+   ],
+   [
+    "VAR_ERRO_MIN_COR",
+    "VARCHAR2(10)"
+   ],
+   [
+    "VAR_ERRO_MAX_COR",
+    "VARCHAR2(10)"
+   ],
+   [
+    "VAR_ERRO_MIN_TRAVA",
+    "NUMBER(1)"
+   ],
+   [
+    "VAR_ERRO_MAX_TRAVA",
+    "NUMBER(1)"
+   ],
+   [
+    "VAR_ERRO_MIN_INIC",
+    "VARCHAR2(20)"
+   ],
+   [
+    "VAR_ERRO_MAX_INIC",
+    "VARCHAR2(20)"
+   ],
+   [
+    "VAR_ERRO_DIAG",
+    "VARCHAR2(2000)"
+   ],
+   [
+    "VAR_AUSEN_DADOS",
+    "NUMBER(1)"
+   ],
+   [
+    "VAR_ORDEM",
+    "NUMBER(3)"
+   ],
+   [
+    "VAR_EXPERT",
+    "NUMBER(1)"
+   ],
+   [
+    "VAR_FORMULA",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "VAR_FORCOMP",
+    "VARCHAR2(2000)"
+   ],
+   [
+    "VAR_DIAGNOSTICO",
+    "VARCHAR2(2000)"
+   ],
+   [
+    "VAR_FOR_VAL",
+    "NUMBER(1)"
+   ],
+   [
+    "VAR_MED_PLAN",
+    "NUMBER(1)"
+   ],
+   [
+    "VAR_METODO",
+    "VARCHAR2(2000)"
+   ],
+   [
+    "ID_GRUPO_MET",
+    "NUMBER(3)"
+   ],
+   [
+    "VAR_POND_ZERO",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ],
+   [
+    "VAR_ESPEC_MIN_VALOR",
+    "NUMBER(15,5)"
+   ],
+   [
+    "VAR_ESPEC_MAX_VALOR",
+    "NUMBER(15,5)"
+   ],
+   [
+    "VAR_OBSERVACAO",
+    "VARCHAR2(4000)"
+   ],
+   [
+    "ID_METODO",
+    "NUMBER(4)"
+   ],
+   [
+    "VAR_MAS_INT_EXIBE",
+    "NUMBER(2)"
+   ],
+   [
+    "VAR_MAS_DEC_EXIBE",
+    "NUMBER(2)"
+   ]
+  ],
+  "pk": "ID_VAR",
+  "fks": [
+   "ID_UNIDADE -> GI_LAB_UNIDADE",
+   "ID_PLAN -> GI_LAB_PLAN_CONF_1",
+   "ID_METODO -> GI_LAB_METODO"
+  ],
+  "uks": []
+ },
+ "GI_LAB_VAR_CAUSA": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_CAUSA",
+    "NUMBER(10)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR,ID_CAUSA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR",
+   "ID_CAUSA -> GI_LAB_CAD_CAUSA"
+  ],
+  "uks": []
+ },
+ "GI_LAB_VAR_DIAGNOSTICO": {
+  "rows": 1273,
+  "analyzed": "2026-07-17T01:00:59.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "DIAG_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "DIAG_DESTACA_CELULA",
+    "VARCHAR2(1)"
+   ],
+   [
+    "DIAG_IND_FORA",
+    "VARCHAR2(1)"
+   ],
+   [
+    "DIAG_IND_QTD_FORA",
+    "NUMBER(3)"
+   ],
+   [
+    "DIAG_IND_SEQ_FORA",
+    "VARCHAR2(1)"
+   ],
+   [
+    "DIAG_IND_NULO",
+    "VARCHAR2(1)"
+   ],
+   [
+    "DIAG_IND_QTD_NULO",
+    "NUMBER(3)"
+   ],
+   [
+    "DIAG_IND_SEQ_NULO",
+    "VARCHAR2(1)"
+   ],
+   [
+    "DIAG_IND_BLOQ_NULO",
+    "VARCHAR2(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_VAR,DIAG_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_VAR_METODO_ECQ": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "VME_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "VME_DESC_METODO",
+    "VARCHAR2(2000)"
+   ]
+  ],
+  "pk": "ID_VAR,VME_DATA",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_VAR_PERIODO": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:21.000Z",
+  "columns": [
+   [
+    "ID_VAR_PERIODO",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ]
+  ],
+  "pk": "ID_VAR_PERIODO",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_VAR_STATUS": {
+  "rows": 3913,
+  "analyzed": "2025-09-05T01:02:03.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "ID_VAR",
+    "NUMBER(10)",
+    "NOT NULL"
+   ],
+   [
+    "VAR_STATUS",
+    "NUMBER(1)"
+   ],
+   [
+    "VAR_VAR_SAFRA",
+    "NUMBER(1)"
+   ],
+   [
+    "VAR_ERRO_MIN_VALOR",
+    "NUMBER(15,5)"
+   ],
+   [
+    "VAR_ERRO_MAX_VALOR",
+    "NUMBER(15,5)"
+   ],
+   [
+    "VAR_ESPEC_MIN_VALOR",
+    "NUMBER(15,5)"
+   ],
+   [
+    "VAR_ESPEC_MAX_VALOR",
+    "NUMBER(15,5)"
+   ],
+   [
+    "VAR_IND_FORA",
+    "VARCHAR2(1)"
+   ],
+   [
+    "VAR_IND_QTD_FORA",
+    "NUMBER(3)"
+   ],
+   [
+    "VAR_IND_SEQ_FORA",
+    "VARCHAR2(1)"
+   ],
+   [
+    "VAR_IND_NULO",
+    "VARCHAR2(1)"
+   ],
+   [
+    "VAR_IND_QTD_NULO",
+    "NUMBER(3)"
+   ],
+   [
+    "VAR_IND_SEQ_NULO",
+    "VARCHAR2(1)"
+   ],
+   [
+    "VAR_IND_BLOQ_NULO",
+    "VARCHAR2(1)"
+   ],
+   [
+    "VAR_PRE_MOAGEM",
+    "NUMBER(1)"
+   ],
+   [
+    "VAR_BLOQUEAR_FECHA",
+    "NUMBER(1)"
+   ],
+   [
+    "VAR_BLOQ_FECH_1DIA_SEM_VALOR",
+    "NUMBER(1)"
+   ]
+  ],
+  "pk": "COD_EMPR,ID_VAR",
+  "fks": [
+   "ID_VAR -> GI_LAB_VAR"
+  ],
+  "uks": []
+ },
+ "GI_LAB_VERIFIC_REL": {
+  "rows": 0,
+  "analyzed": "2025-03-06T02:39:22.000Z",
+  "columns": [
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "SAF_ANO_SAFRA",
+    "NUMBER(4)",
+    "NOT NULL"
+   ],
+   [
+    "CON_DATA",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "CON_COD",
+    "NUMBER(6)",
+    "NOT NULL"
+   ],
+   [
+    "CON_TIPO_CONS",
+    "VARCHAR2(1)",
+    "NOT NULL"
+   ],
+   [
+    "CON_USUARIO",
+    "VARCHAR2(30)"
+   ],
+   [
+    "CON_DATA_ATUAL",
+    "DATE"
+   ],
+   [
+    "CON_COMENTARIO",
+    "VARCHAR2(1000)"
+   ]
+  ],
+  "pk": "COD_EMPR,SAF_ANO_SAFRA,CON_DATA,CON_COD,CON_TIPO_CONS",
+  "fks": [],
+  "uks": []
+ },
+ "GI_MOT_PARADA_LANC": {
+  "rows": 25,
+  "analyzed": "2025-03-06T02:39:22.000Z",
+  "columns": [
+   [
+    "ID_MOTIVO",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "ID_GRUPO_PARADA",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "ID_LOCAL",
+    "NUMBER(3)",
+    "NOT NULL"
+   ],
+   [
+    "COD_EMPR",
+    "NUMBER(2)",
+    "NOT NULL"
+   ],
+   [
+    "MPL_DATA_INICIO",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "MPL_DATA_FINAL",
+    "DATE",
+    "NOT NULL"
+   ],
+   [
+    "MPL_HORAS_PARADAS_OLD",
+    "DATE"
+   ],
+   [
+    "MPL_OBS",
+    "VARCHAR2(2000)"
+   ],
+   [
+    "MPL_PROG",
+    "VARCHAR2(1)"
+   ],
+   [
+    "MPL_ID_TURNO",
+    "NUMBER(10)"
+   ],
+   [
+    "MPL_HORAS_PARADAS",
+    "VARCHAR2(5)"
+   ]
+  ],
+  "pk": "ID_MOTIVO,ID_GRUPO_PARADA,ID_LOCAL,COD_EMPR,MPL_DATA_INICIO,MPL_DATA_FINAL",
+  "fks": [
+   "ID_GRUPO_PARADA,ID_LOCAL -> GI_LAB_LOCAL_PARADA",
+   "ID_MOTIVO -> GI_LAB_MOT_PARADA"
+  ],
+  "uks": []
+ },
+ "MLOG$_GI_LAB_PLAN_CONF_1": {
+  "rows": null,
+  "analyzed": null,
+  "comment": "snapshot log for master table GATEC_LAB.GI_LAB_PLAN_CONF_1",
+  "columns": [
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ],
+   [
+    "SNAPTIME$$",
+    "DATE"
+   ],
+   [
+    "DMLTYPE$$",
+    "VARCHAR2(1)"
+   ],
+   [
+    "OLD_NEW$$",
+    "VARCHAR2(1)"
+   ],
+   [
+    "CHANGE_VECTOR$$",
+    "RAW"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "MLOG$_GI_LAB_UNIDADE": {
+  "rows": null,
+  "analyzed": null,
+  "comment": "snapshot log for master table GATEC_LAB.GI_LAB_UNIDADE",
+  "columns": [
+   [
+    "ID_UNIDADE",
+    "NUMBER(3)"
+   ],
+   [
+    "SNAPTIME$$",
+    "DATE"
+   ],
+   [
+    "DMLTYPE$$",
+    "VARCHAR2(1)"
+   ],
+   [
+    "OLD_NEW$$",
+    "VARCHAR2(1)"
+   ],
+   [
+    "CHANGE_VECTOR$$",
+    "RAW"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "MLOG$_GI_LAB_VAR": {
+  "rows": null,
+  "analyzed": null,
+  "comment": "snapshot log for master table GATEC_LAB.GI_LAB_VAR",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "SNAPTIME$$",
+    "DATE"
+   ],
+   [
+    "DMLTYPE$$",
+    "VARCHAR2(1)"
+   ],
+   [
+    "OLD_NEW$$",
+    "VARCHAR2(1)"
+   ],
+   [
+    "CHANGE_VECTOR$$",
+    "RAW"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "RUPD$_GI_LAB_PLAN_CONF_1": {
+  "rows": null,
+  "analyzed": null,
+  "comment": "temporary updatable snapshot log",
+  "columns": [
+   [
+    "ID_PLAN",
+    "NUMBER(5)"
+   ],
+   [
+    "DMLTYPE$$",
+    "VARCHAR2(1)"
+   ],
+   [
+    "SNAPID",
+    "NUMBER"
+   ],
+   [
+    "CHANGE_VECTOR$$",
+    "RAW"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "RUPD$_GI_LAB_UNIDADE": {
+  "rows": null,
+  "analyzed": null,
+  "comment": "temporary updatable snapshot log",
+  "columns": [
+   [
+    "ID_UNIDADE",
+    "NUMBER(3)"
+   ],
+   [
+    "DMLTYPE$$",
+    "VARCHAR2(1)"
+   ],
+   [
+    "SNAPID",
+    "NUMBER"
+   ],
+   [
+    "CHANGE_VECTOR$$",
+    "RAW"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ },
+ "RUPD$_GI_LAB_VAR": {
+  "rows": null,
+  "analyzed": null,
+  "comment": "temporary updatable snapshot log",
+  "columns": [
+   [
+    "ID_VAR",
+    "NUMBER(10)"
+   ],
+   [
+    "DMLTYPE$$",
+    "VARCHAR2(1)"
+   ],
+   [
+    "SNAPID",
+    "NUMBER"
+   ],
+   [
+    "CHANGE_VECTOR$$",
+    "RAW"
+   ]
+  ],
+  "fks": [],
+  "uks": []
+ }
+}

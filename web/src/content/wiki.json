@@ -1,0 +1,132 @@
+{
+  "titulo": "Lab App — Cómo funciona el sistema",
+  "version": "Noviembre 2026",
+  "secciones": [
+    {
+      "id": "que-es",
+      "titulo": "Qué es Lab App",
+      "bloques": [
+        { "t": "p", "x": "Lab App es el sistema de laboratorio de la empresa. Reúne el control del proceso industrial, el análisis de la caña que ingresa, los catálogos de la operación y la administración de usuarios y permisos. Trabaja sobre la base de datos Oracle de la empresa, la misma que usa el sistema GATEC, por lo que ambos pueden usarse en paralelo." },
+        { "t": "p", "x": "Se compone de tres partes:" },
+        { "t": "ul", "items": [
+          "Base de datos Oracle: la misma del GATEC (esquemas GATEC_AGR, GATEC_GPI_NEW y GATEC_LAB). Es la única fuente de datos.",
+          "API (servidor): recibe los pedidos, valida el usuario y sus permisos, consulta la base y devuelve los resultados. Nunca muestra mensajes internos de Oracle.",
+          "Aplicación web (lo que usted ve en el navegador): pantallas, gráficos, tablas y exportaciones."
+        ] }
+      ]
+    },
+    {
+      "id": "ingreso",
+      "titulo": "Ingreso y sesión",
+      "bloques": [
+        { "t": "ul", "items": [
+          "Usuario: es su mismo usuario del GATEC.",
+          "Contraseña: es la contraseña de su usuario de Oracle (la misma que ya usa). La aplicación la verifica contra la base y no la guarda en ningún lado.",
+          "Si falla la contraseña dos veces seguidas, el ingreso se bloquea 15 minutos. Esto protege su cuenta de Oracle, que se bloquea por sí sola con pocos intentos.",
+          "Solo pueden ingresar usuarios activos del GATEC que tengan cuenta de Oracle."
+        ] }
+      ]
+    },
+    {
+      "id": "permisos",
+      "titulo": "Permisos",
+      "bloques": [
+        { "t": "p", "x": "Los permisos son los mismos del GATEC. Cada pantalla corresponde a un formulario del sistema viejo y solo aparece en el menú si usted puede abrirla." },
+        { "t": "tabla", "cab": ["Código GATEC", "Significado", "En Lab App"], "filas": [
+          ["1", "Acceso total", "Consulta y, donde existe, edición"],
+          ["3", "Acceso parcial", "Solo consulta"],
+          ["2", "Sin acceso", "La pantalla no aparece"]
+        ] },
+        { "t": "ul", "items": [
+          "Si hay un permiso directo del usuario para un formulario, ese manda.",
+          "Si no lo hay, entre sus grupos se toma el permiso más restrictivo (el código menor).",
+          "Los superusuarios (master) ven todo."
+        ] }
+      ]
+    },
+    {
+      "id": "contexto",
+      "titulo": "Empresa y zafra",
+      "bloques": [
+        { "t": "p", "x": "Todos los datos se muestran para una empresa y una zafra. Se eligen en el encabezado y, al cambiarlas, todas las pantallas se reinician con los datos del nuevo contexto. Solo se ofrecen las empresas y zafras a las que su usuario tiene acceso." }
+      ]
+    },
+    {
+      "id": "navegacion",
+      "titulo": "Cómo moverse",
+      "bloques": [
+        { "t": "ul", "items": [
+          "Menú lateral: reproduce los módulos del GATEC. Se puede ocultar con el botón de las tres rayas.",
+          "Buscador del menú: presione / o Ctrl+K y escriba parte del nombre de la pantalla; Enter abre la primera coincidencia.",
+          "Inicio: muestra los accesos permitidos y los accesos recientes.",
+          "Tema: se puede alternar entre claro y oscuro; la elección se recuerda en su navegador.",
+          "Exportar: las consultas permiten descargar a Excel o CSV y las tablas se pueden imprimir."
+        ] }
+      ]
+    },
+    {
+      "id": "modulos",
+      "titulo": "Módulos disponibles",
+      "bloques": [
+        { "t": "tabla", "cab": ["Módulo", "Qué contiene"], "filas": [
+          ["Proceso Industrial (GPI)", "Digitación diaria, valores de variables, supervisorio, panel de información, control estadístico (CEP), correlación, informes, boletines, real x metas y listados."],
+          ["Laboratorio", "Análisis de caña (sonda) y entrada de caña (balanza con el análisis del acumulado)."],
+          ["Tablas maestras", "Catálogos de los módulos agrícola, básico y GPI, con alta, cambio y baja según el permiso."],
+          ["Administración", "Usuarios, grupos, permisos por pantalla y conexiones, en solo consulta. Solo para administradores."]
+        ] }
+      ]
+    },
+    {
+      "id": "gpi",
+      "titulo": "GPI: cómo se calculan los valores",
+      "bloques": [
+        { "t": "p", "x": "En la Digitación diaria, cada planilla tiene variables. Unas se digitan y otras se calculan con fórmulas guardadas en la base. Lab App reimplementa el motor de fórmulas del GATEC viejo y lo valida contra lo que calculó el sistema anterior: coincide en cerca del 99,6 % de las celdas." },
+        { "t": "ul", "items": [
+          "Acumulados: el acumulado de un día se arma a partir del acumulado del día anterior más el valor del día (no se recalcula toda la zafra). Por eso corregir un día ya cerrado no cambia los acumulados guardados.",
+          "Tipos de acumulado: no acumula, media, media ponderada, suma, último valor y media calculada.",
+          "Fuera de especificación: los valores fuera del mínimo y máximo definidos para la variable se marcan en las pantallas y en su listado.",
+          "Las consultas con SQL guardado en la base (Db_Select) solo ejecutan una sentencia SELECT sobre una lista de tablas permitidas, en modo de solo lectura."
+        ] }
+      ]
+    },
+    {
+      "id": "escritura",
+      "titulo": "Qué se puede modificar y qué no",
+      "bloques": [
+        { "t": "p", "x": "Como el GATEC viejo sigue en uso, Lab App es en su mayor parte de solo consulta. Se escribe únicamente en:" },
+        { "t": "ul", "items": [
+          "Tablas maestras: alta, cambio y baja de catálogos, solo si su permiso es de acceso total y siempre dentro de su empresa y zafra.",
+          "Digitación diaria del GPI: se edita con doble clic en la celda. Está apagada por defecto, requiere acceso total, solo funciona sobre días posteriores al último cierre y cada cambio queda registrado con auditoría.",
+          "El registro de intentos de ingreso (para el bloqueo de 15 minutos)."
+        ] },
+        { "t": "p", "x": "El cierre diario, la digitación de sonda y el resto de las escrituras no están habilitados." }
+      ]
+    },
+    {
+      "id": "seguridad",
+      "titulo": "Seguridad y datos",
+      "bloques": [
+        { "t": "ul", "items": [
+          "La aplicación trabaja contra el servidor de desarrollo (DESA). Está bloqueada para no conectarse a producción.",
+          "DESA se recarga cada día desde producción: lo creado a mano allí se pierde.",
+          "Toda entrada del usuario se valida en el servidor (fechas reales, números estrictos, largos máximos).",
+          "Cada pantalla vuelve a verificar los permisos en la API, aunque alguien abra la dirección a mano.",
+          "Las contraseñas nunca se guardan ni se muestran, ni siquiera en Administración."
+        ] }
+      ]
+    },
+    {
+      "id": "faq",
+      "titulo": "Preguntas frecuentes",
+      "bloques": [
+        { "t": "tabla", "cab": ["Pregunta", "Respuesta"], "filas": [
+          ["No veo una pantalla que sí veo en el GATEC.", "Puede faltar permiso, o la pantalla todavía no fue recreada (aparece en gris con la marca «Pend.» en el menú del GPI)."],
+          ["Mi contraseña es correcta pero no ingreso.", "Si falló dos veces, espere 15 minutos. Si no tiene cuenta de Oracle, pida que se la creen."],
+          ["Un valor difiere del GATEC viejo.", "El motor coincide en cerca del 99,6 %. Avise la variable, la fecha y los valores de ambos sistemas."],
+          ["No puedo editar en la digitación.", "La edición exige acceso total, un día posterior al último cierre y que la función esté activada."],
+          ["No aparecen datos de la zafra.", "Revise la empresa y la zafra elegidas en el encabezado."]
+        ] }
+      ]
+    }
+  ]
+}

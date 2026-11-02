@@ -1,0 +1,155 @@
+<title>Calendario de sprints GATEC</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: encabezado, línea de tiempo por semanas (1 a 20), tarjetas de sprint con trabajos y entregable */
+:root{
+  --bg:#f4f6f8; --surface:#ffffff; --fg:#14222b; --muted:#5a6b76; --line:#d9e0e5;
+  --a:#3b5f86; --a-bg:#dde7f2;   /* sprints impares */
+  --b:#1f7a5a; --b-bg:#dcefe7;   /* sprints pares */
+  --deliv:#fff6e0; --deliv-line:#e2b659; --deliv-fg:#5c4000;
+  --ok:#1f7a5a; --ok-bg:#e3f4ec; --ok-fg:#0f4a35;
+  --font:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1a21; --surface:#17252e; --fg:#e6edf1; --muted:#93a4af; --line:#2a3b46;
+  --a:#86aee0; --a-bg:#1c3047; --b:#52c79c; --b-bg:#16372d;
+  --deliv:#2e2610; --deliv-line:#8a6a1c; --deliv-fg:#f1dba6; --ok:#52c79c; --ok-bg:#16372d; --ok-fg:#bfe9d6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1a21; --surface:#17252e; --fg:#e6edf1; --muted:#93a4af; --line:#2a3b46;
+  --a:#86aee0; --a-bg:#1c3047; --b:#52c79c; --b-bg:#16372d;
+  --deliv:#2e2610; --deliv-line:#8a6a1c; --deliv-fg:#f1dba6; --ok:#52c79c; --ok-bg:#16372d; --ok-fg:#bfe9d6; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--font);
+  padding-block:32px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+h1{font-size:clamp(26px,4vw,38px);line-height:1.1;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-weight:600}
+.sub{color:var(--muted);margin:8px 0 0;max-width:68ch}
+.tag{display:inline-block;font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:99px;border:1px solid var(--line);color:var(--muted);margin-bottom:12px}
+.s-odd{--c:var(--a);--cb:var(--a-bg)} .s-even{--c:var(--b);--cb:var(--b-bg)}
+
+/* timeline */
+.tl{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto}
+.tl-in{min-width:880px}
+.tl-row{display:grid;grid-template-columns:200px 1fr;align-items:center;height:34px;border-top:1px solid var(--line)}
+.tl-row.hd{height:26px;border-top:0}
+.nm{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:8px}
+.wk{display:grid;grid-template-columns:repeat(var(--w),1fr);height:100%;align-items:center;font:11px var(--mono);color:var(--muted);text-align:center}
+.wk span{border-left:1px solid var(--line);height:100%;display:flex;align-items:center;justify-content:center}
+.wk.hd span{border-left:0}
+.track{position:relative;height:100%;background:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px calc(100%/var(--w)))}
+.bar{position:absolute;top:6px;height:22px;border-radius:4px;background:var(--cb);border:2px solid var(--c);color:var(--c);font:600 11px/18px var(--mono);padding:0 6px;white-space:nowrap;overflow:hidden}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card-top{display:flex;justify-content:space-between;gap:8px;align-items:baseline;font:600 12px var(--mono)}
+.card-top .n{color:var(--c)} .card-top .wks{background:var(--cb);color:var(--c);padding:2px 9px;border-radius:99px}
+.card h3{margin:0;font-size:18px;line-height:1.25;text-wrap:balance}
+.meta{font:12px var(--mono);color:var(--muted)}
+.goal{margin:0;font-size:14px;color:var(--muted)}
+.card h4{margin:2px 0 0;font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px;font-size:13.5px}
+.card li{padding-left:18px;position:relative}
+.card li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:2px;background:var(--c)}
+.deliv{background:var(--deliv);border:1px solid var(--deliv-line);color:var(--deliv-fg);border-radius:6px;padding:10px 12px;font-size:13.5px;margin-top:auto}
+.deliv b{display:block;font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.res{background:var(--ok-bg);border:1px solid var(--ok);color:var(--ok-fg);border-radius:6px;padding:10px 12px;font-size:13.5px}
+.res b{display:block;font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.est{font:600 11px var(--mono);padding:2px 9px;border-radius:99px;background:var(--ok-bg);color:var(--ok-fg);border:1px solid var(--ok)}
+.dod{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;font-size:13.5px;color:var(--muted)}
+.dod b{display:block;color:var(--fg);font:600 12px var(--mono);margin-bottom:2px}
+.note{font-size:13px;color:var(--muted);max-width:80ch;margin:0}
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="tag">Proyección del MVP · sin fechas</span>
+    <h1>Calendario de sprints · reescritura de GATEC</h1>
+    <p class="sub" id="sub"></p>
+  </header>
+
+  <section><h2>Línea de tiempo por semanas</h2><div class="tl"><div class="tl-in" id="tl"></div></div></section>
+  <section><h2>Trabajos y entregable de cada sprint</h2><div class="cards" id="cards"></div></section>
+  <section><h2>Cómo se da por terminado cada sprint</h2><div class="dod">
+    <div><b>1 · INVENTARIO</b>Se revisan pantallas, controles y SQL del ejecutable VB6.</div>
+    <div><b>2 · BASE</b>Se confirman tablas y columnas reales y las reglas en PL/SQL.</div>
+    <div><b>3 · API Y FRONT</b>Módulo en la API y páginas protegidas por permiso.</div>
+    <div><b>4 · LADO A LADO</b>Se compara con el GATEC viejo que el comportamiento coincide.</div>
+  </div></section>
+  <p class="note">Proyección: cada sprint dura 2 semanas y los sprints van uno tras otro. Las semanas cuentan desde el arranque del proyecto; las fechas se fijan cuando se decida el inicio. El contenido sale del ROADMAP y del inventario de los ejecutables VB6.</p>
+</div>
+
+<script>
+const W = 2; // semanas por sprint
+const S = [
+ {t:"Tablas maestras",m:"Módulos 15 y 91",f:"32 formularios",
+  g:"Dejar cargada la base de datos de referencia sobre la que se prueba todo lo demás.",
+  w:["Pantallas de fundos, variedades, clientes, productos y unidades","Tipos de embalagem (módulo 91)","CRUD genérico con permisos por formulario","Mapeo de cada formulario ABM a su tabla real"],
+  e:"Las 32 pantallas de tablas maestras funcionando contra la base, con alta, edición y baja, y los permisos del GATEC viejo.",
+  r:"Hecho (ROADMAP): 14 pantallas de tablas maestras (módulo 15) más Tipos de Embalagem (módulo 91), sobre el CRUD genérico con permisos y filtro de empresa/zafra. Mapeo de formularios a tablas reales documentado y validación técnica hecha (FKs, permisos, datos ida y vuelta). Pendiente: checklist corta con un usuario del GATEC viejo, porque estos formularios no están en los ejecutables y no hay pantalla VB6 para comparar."},
+ {t:"Básico / Agrícola",m:"Módulo 1",f:"33 formularios",
+  g:"Completar los datos operativos que la carga diaria del GPI necesita para poder probarse.",
+  w:["Funcionarios, turnos y liberación","Centros de costo y transbordo","30 tablas del módulo sobre el CRUD genérico, con frmParam","Validación de relaciones entre tablas (FKs) y de que los datos vuelvan iguales tras guardar"],
+  e:"Las 33 pantallas del módulo 1 operativas y un informe de validación de datos de los sprints 1 y 2."},
+ {t:"GPI · Carga diaria y variables",m:"Módulo 90, parte 1",f:"~40 formularios",
+  g:"Poner en pantalla el núcleo del sistema: lo que se digita cada día en planta y lo que se calcula.",
+  w:["Tablas del GPI: unidades, constantes, metodologías, ME alcohol, densidad Brix, granulometría","Árbol de análisis con accesos por usuario","Grilla del día: horas, bateladas y resultado del día","Motor de fórmulas reescrito y validado contra lo que calculó el VB6","Decidir cómo se tratan las fórmulas que ejecutan SQL guardado (Db_Select)"],
+  e:"Lançamento diario en consulta, con el resultado del día calculado y al menos 99% de las celdas iguales a las del GPI viejo en períodos de prueba."},
+ {t:"GPI · Cierre, paradas, material en proceso",m:"Módulo 90, parte 2",f:"~35 formularios",
+  g:"Cerrar el día y registrar lo que se detiene o queda en proceso.",
+  w:["Paradas, reducción de moagem, materiales, tanques y productos","Digitación de material en proceso (unas 375 mil filas en la base)","Fechamento diario con candado para no cerrar a la vez que el VB6","Validaciones previas del cierre y acumulados","ABM de análisis, variables y fórmulas"],
+  e:"Un cierre diario completo hecho en DESA, comparado fila a fila con el que deja el VB6, más las pantallas de paradas y materiales."},
+ {t:"GPI · Painel, cockpit, CEP, gráficos",m:"Módulo 90, parte 3",f:"~35 formularios",
+  g:"Darle a supervisión la vista de planta que usa hoy.",
+  w:["Painel y cockpit de supervisión","Control estadístico de proceso (CEP)","Gráficos de supervisión","Comparación con el GPI viejo sobre la misma fecha"],
+  e:"Tableros y gráficos del GPI que muestran los mismos valores que el sistema viejo para una fecha de prueba."},
+ {t:"GPI · Reportes, metas, correo/SMS, Fermentec",m:"Módulo 90, parte 4",f:"~38 formularios",
+  g:"Sacar el GPI hacia gerencia y hacia sistemas externos.",
+  w:["Reescribir los 67 reportes ActiveReports","Metas","Envío de correo y SMS","Integración con Fermentec","Listados de paradas y de reducción de moagem, y gráfico de Pareto de paradas"],
+  e:"Reportes del GPI emitidos desde la web y las integraciones de correo, SMS y Fermentec funcionando."},
+ {t:"Pre-Cosecha + Lab. de recepción",m:"Módulo 6 y GAtec_Lat",f:"37 + 24 formularios",
+  g:"Cubrir el análisis de la caña antes de la molienda.",
+  w:["Pre-análisis y prova em branco","Rastreabilidad y AR","Análisis de sonda y análisis completa","Lectura de aparato serial y código de barras","Correo hacia el GPI y reimpresión de BA"],
+  e:"Flujo de recepción de caña de punta a punta: pre-análisis, sonda y rastreabilidad. La lectura del aparato serial queda como riesgo a confirmar, porque un navegador no la lee sin un programa local."},
+ {t:"Laboratorio (GAtec_Lab)",m:"GAtec_Lab",f:"77 formularios",
+  g:"Migrar el ejecutable más grande del sistema.",
+  w:["Lançamento de sonda y de pre-análisis","Impureza y recálculo de impureza","Cartões de pré-análise y reportes","Turnos, turmas, variedades y motivos de cancelación de consecana","Nueva safra y parámetros de pre y de sonda"],
+  e:"Las 77 pantallas del laboratorio operativas. Si el volumen no entra en 2 semanas, el sprint se parte en 8 y 8-bis."},
+ {t:"Pre-Zafra, Config, Traducciones, Balanza",m:"Módulos 70, 307, 338 y 10",f:"17 + 11 + 11 formularios",
+  g:"Cerrar los módulos y utilitarios chicos en un solo sprint.",
+  w:["Pre-Zafra, Config y Otros","Mantenimiento de traducciones con import y export (GAtec_TRA)","Balanza y reporte de acumulado (Bal0015)"],
+  e:"Los módulos chicos y los dos utilitarios (traducciones y balanza) funcionando dentro de la misma web."},
+ {t:"Administración y cubos",m:"GAtec_Senha y cubos",f:"32 + 15 formularios",
+  g:"Administrar usuarios y permisos desde la web y dar los cubos de datos.",
+  w:["ABM de usuarios, grupos y permisos","Copiar derechos entre usuarios y entre grupos","Cubo genérico: definición, filtros, accesos y log","Cubo agrícola, con y sin ATR"],
+  e:"Administración de seguridad desde la web y cubos de datos, para dejar el sistema viejo sin funciones pendientes."},
+];
+const n=S.length, total=n*W;
+document.getElementById("sub").textContent=
+ `${n} sprints de ${W} semanas, ${total} semanas en total. Cada sprint indica los trabajos previstos y lo que se espera entregar al cierre.`;
+
+// timeline
+let h=`<div class="tl-row hd"><div></div><div class="wk hd" style="--w:${total}">`;
+for(let i=1;i<=total;i++)h+=`<span>${i}</span>`;
+h+=`</div></div>`;
+S.forEach((s,i)=>{
+  const a=i*W;
+  h+=`<div class="tl-row ${i%2?"s-even":"s-odd"}"><div class="nm">Sprint ${i+1} · ${s.t.split(" · ")[0]}</div>
+  <div class="track" style="--w:${total}"><div class="bar" style="left:${a/total*100}%;width:${W/total*100}%" title="${s.t}">Semanas ${a+1}–${a+W}</div></div></div>`;
+});
+document.getElementById("tl").innerHTML=h;
+
+// cards
+document.getElementById("cards").innerHTML=S.map((s,i)=>`<article class="card ${i%2?"s-even":"s-odd"}">
+ <div class="card-top"><span class="n">SPRINT ${i+1}</span><span class="wks">Semanas ${i*W+1}–${i*W+W}</span>${s.r?'<span class="est">✔ HECHO</span>':''}</div>
+ <h3>${s.t}</h3>
+ <div class="meta">${s.m} · ${s.f}</div>
+ <p class="goal">${s.g}</p>
+ <h4>Trabajos</h4>
+ <ul>${s.w.map(x=>`<li>${x}</li>`).join("")}</ul>
+ <div class="deliv"><b>Entregable esperado</b>${s.e}</div>
+ ${s.r?`<div class="res"><b>Resultado</b>${s.r}</div>`:""}
+ </article>`).join("");
+</script>

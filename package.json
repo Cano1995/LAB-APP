@@ -1,0 +1,21 @@
+{
+  "name": "lab-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reescritura web de GATEC (API Node + front React)",
+  "scripts": {
+    "test": "npm test --prefix api && npm test --prefix web",
+    "build": "npm run build --prefix web",
+    "lint": "eslint .",
+    "idioma": "node tools/verificar-idioma.js",
+    "audit": "npm audit --omit=dev --audit-level=high --prefix api && npm audit --omit=dev --audit-level=high --prefix web",
+    "ci": "npm run lint && npm run idioma && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "eslint": "9.39.5",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.13.0",
+    "typescript-eslint": "8.72.1"
+  }
+}

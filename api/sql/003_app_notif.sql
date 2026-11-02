@@ -1,0 +1,23 @@
+-- LAB_APP_NOTIF: bandeja de notificaciones (una fila por usuario destinatario; LEIDA_FECHA nula = pendiente). Idempotente.
+DECLARE
+  n NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO n FROM user_tables WHERE table_name = 'LAB_APP_NOTIF';
+  IF n = 0 THEN
+    EXECUTE IMMEDIATE q'[
+      CREATE TABLE LAB_APP_NOTIF (
+        ID           NUMBER GENERATED ALWAYS AS IDENTITY,
+        FECHA        TIMESTAMP      DEFAULT SYSTIMESTAMP NOT NULL,
+        ID_USUARIO   NUMBER(5)      NOT NULL,
+        TIPO         VARCHAR2(20)   DEFAULT 'info' NOT NULL,
+        TITULO       VARCHAR2(120)  NOT NULL,
+        MENSAJE      VARCHAR2(500),
+        ENLACE       VARCHAR2(200),
+        LEIDA_FECHA  TIMESTAMP,
+        CONSTRAINT PK_LAB_APP_NOTIF PRIMARY KEY (ID)
+      )
+    ]';
+    EXECUTE IMMEDIATE 'CREATE INDEX IX_LAB_APP_NOTIF_USU ON LAB_APP_NOTIF (ID_USUARIO, LEIDA_FECHA)';
+  END IF;
+END;
+/
